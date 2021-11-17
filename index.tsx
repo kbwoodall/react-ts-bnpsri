@@ -19,20 +19,25 @@ const hooks = () => {
   );
 };
 const showme = (msg: string) => {
-  return msg;
+  return (
+    <div>
+      <p>{msg}</p>
+    </div>
+  );
 };
 
 const addit = (x: number, y: number) => {
-  return <div>return (x*y);</div>;
+  return <p>return (x*y);</p>;
 };
 
 const App = () => {
   return (
     <div>
-      <p> {showme('ok so far')}</p>
-      <p> {hooks()}</p>
-      <p>Hooks stuff</p>
-      <p>{UseEffect()}</p>
+      {showme('ok so far')}
+      <p>Hooks useState</p>
+      {hooks()}
+      <p>Hooks useEffect</p>
+      {UseEffect()}
     </div>
   );
 };
@@ -41,8 +46,8 @@ function UseEffect() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    alert('You clicked ' + count + ' times');
-  });
+    console.log('You clicked ' + count + ' times');
+  }, []);
 
   return (
     <div>
