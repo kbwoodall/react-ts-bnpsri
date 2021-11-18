@@ -13,7 +13,7 @@ const hooks = () => {
   const [count, setCount] = useState(0);
   return (
     <div>
-      <p>You clicked {count} times first</p>
+      <p style={{color: "red"}}>You clicked {count} times first</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
