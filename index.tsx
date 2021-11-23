@@ -4,16 +4,11 @@ import Hello from './Hello';
 import './style.css';
 import { useState, useReducer, useEffect } from 'react';
 
-interface AppProps {}
-interface AppState {
-  name: string;
-}
-
 const hooks = () => {
   const [count, setCount] = useState(0);
   return (
     <div>
-      <p style={{color: "red"}}>You clicked {count} times first</p>
+      <p style={{ color: 'blue' }}>You clicked {count} times first</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
@@ -32,8 +27,7 @@ const addit = (x: number, y: number) => {
 
 const App = () => {
   return (
-    <div>
-      {showme('ok so far')}
+    <div style={{ backgroundColor: 'coral' }}>
       <p>Hooks useState</p>
       {hooks()}
       <p>Hooks useEffect</p>
@@ -51,7 +45,7 @@ function UseEffect() {
 
   return (
     <div>
-      <p>You clicked {count} times again</p>
+      <p style={{ color: 'blue' }}>You clicked {count} times again</p>
       <button onClick={() => setCount(count + 1)}>Click me again</button>
     </div>
   );
