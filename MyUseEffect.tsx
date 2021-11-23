@@ -13,10 +13,11 @@ interface ShowTextProps {
   text: string;
 }
 
-export function ShowText({ text }: ShowTextProps): JSX.Element | null {
+export function ShowText({ msg }): JSX.Element | null {
   //if (show) {
-  console.log('in ShowText');
-  return <div>{text}</div>;
+  console.log('in ShowText ' + msg);
+
+  return (<div>{msg}</div>);
   //}
   //return null;
 }

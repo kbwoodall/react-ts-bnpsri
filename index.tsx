@@ -40,7 +40,9 @@ const App = () => {
 
 function UseEffect() {
   mydemo();
-  ShowText({text:'xx'});
+  let msg: string = 'wassup from ShowText';
+  //return (<div>{msg}</div>);
+  return ShowText({ msg });
 }
 
 function UseEffectx() {
