@@ -40,7 +40,7 @@ const App = () => {
 
 function UseEffect() {
   mydemo();
-  //ShowText('xxx');
+  ShowText({text:'xx'});
 }
 
 function UseEffectx() {
