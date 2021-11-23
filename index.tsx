@@ -41,23 +41,7 @@ const App = () => {
 function UseEffect() {
   mydemo();
   let msg: string = 'wassup from ShowText';
-  //return (<div>{msg}</div>);
   return ShowText({ msg });
-}
-
-function UseEffectx() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    console.log('You clicked ' + count + ' times');
-  }, []);
-
-  return (
-    <div>
-      <p style={{ color: 'blue' }}>You clicked {count} times again</p>
-      <button onClick={() => setCount(count + 1)}>Click me again</button>
-    </div>
-  );
 }
 
 render(<App />, document.getElementById('root'));
