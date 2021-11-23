@@ -2,6 +2,14 @@ import React from 'react';
 import { useState, useReducer, useEffect } from 'react';
 import { FC, ReactElement } from 'react';
 
+interface FormatDateProps {
+  date: Date;
+}
+
+export function FormatDate({ date }: FormatDateProps): JSX.Element {
+  return <div>{date.toLocaleString()}</div>;
+}
+
 export function mydemo() {
   // logic will go here ..
   console.log('this is exportable function in TypeScript. !!');
@@ -19,15 +27,15 @@ export function mydemo() {
   const Child: FC<ChildProps> = (): ReactElement => {
     const [clickA, setClickA] = useState(0);
     const [clickB, setClickB] = useState(0);
-  
+
     useEffect(() => {
       if (clickA === 0) {
-        console.log('Component loaded!')
+        console.log('Component loaded!');
       } else {
         console.log('Button A was clicked!');
       }
     }, [clickA]);
-  
+
     return (
       <div>
         <p>A Clicks: {clickA}</p>
@@ -36,9 +44,8 @@ export function mydemo() {
         <button onClick={() => setClickB(clickB + 1)}>Button B</button>
         <p id="click-a"></p>
       </div>
-    )
+    );
   };
-  
 
   return <div>{'xxx'}</div>;
 
