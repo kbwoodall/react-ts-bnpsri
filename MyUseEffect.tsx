@@ -10,15 +10,14 @@ export function FormatDate({ date }: FormatDateProps): JSX.Element {
   return <div>{date.toLocaleString()}</div>;
 }
 interface ShowTextProps {
-  show: boolean;
   text: string;
 }
- 
-export function ShowText({ show, text }: ShowTextProps): JSX.Element | null {
-  if (show) {
-    return <div>{text}</div>;
-  }
-  return null;
+
+export function ShowText({ text }: ShowTextProps): JSX.Element | null {
+  //if (show) {
+  return <div>{text}</div>;
+  //}
+  //return null;
 }
 export function mydemo() {
   // logic will go here ..

@@ -40,7 +40,7 @@ const App = () => {
 
 function UseEffect() {
   mydemo();
-  //FormatDate();
+  //ShowText('xxx');
 }
 
 function UseEffectx() {
