@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import { mydemo } from './MyUseEffect.tsx';
+import { mydemo } from './MyUseEffect';
 import './style.css';
 import { useState, useReducer, useEffect } from 'react';
 
