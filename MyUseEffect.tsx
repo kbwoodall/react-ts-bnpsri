@@ -16,7 +16,11 @@ export function mydemo() {
     </div>
   );
 
-/*
+  /*
 test
+<p style={{ color: 'blue' }}>You clicked {count} times again</p>
+      <button onClick={() => setCount(count + 1)}>Click me again</button>
+
+
 */
 }
