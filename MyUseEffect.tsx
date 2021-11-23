@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function mydemo(){
+export function mydemo() {
   // logic will go here ..
-  console.log("this is exportable function in TypeScript. !!")
-  }
+  console.log('this is exportable function in TypeScript. !!');
+}
