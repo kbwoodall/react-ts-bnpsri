@@ -38,6 +38,10 @@ const App = () => {
 };
 
 function UseEffect() {
+  {mydemo}
+}
+
+function UseEffectx() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
