@@ -4,6 +4,7 @@ import Hello from './Hello';
 import { mydemo } from './MyUseEffect';
 import './style.css';
 import { useState, useReducer, useEffect } from 'react';
+import { FC, ReactElement } from 'react';
 
 const hooks = () => {
   const [count, setCount] = useState(0);
