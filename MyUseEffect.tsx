@@ -15,6 +15,7 @@ interface ShowTextProps {
 
 export function ShowText({ text }: ShowTextProps): JSX.Element | null {
   //if (show) {
+  console.log('in ShowText');
   return <div>{text}</div>;
   //}
   //return null;
