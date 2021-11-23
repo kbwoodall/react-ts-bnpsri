@@ -61,3 +61,22 @@ function UseEffectx() {
 }
 
 render(<App />, document.getElementById('root'));
+
+/*
+function UseEffectx() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('You clicked ' + count + ' times');
+  }, []);
+
+  return (
+    <div>
+      <p style={{ color: 'blue' }}>You clicked {count} times again</p>
+      <button onClick={() => setCount(count + 1)}>Click me again</button>
+    </div>
+  );
+}
+
+
+*/
