@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useReducer, useEffect } from 'react';
 import { FC, ReactElement } from 'react';
 
-
 export function mydemo() {
   // logic will go here ..
   console.log('this is exportable function in TypeScript. !!');
@@ -12,11 +11,12 @@ export function mydemo() {
   }, []);
 
   type ChildProps = {
-    name: string,
-    id: number,
-    bio?: string,
-  }
-  
+    name: string;
+    id: number;
+    bio?: string;
+  };
+
+
 
   return <div>{'xxx'}</div>;
 
