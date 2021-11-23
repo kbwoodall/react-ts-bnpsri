@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import { mydemo } from './MyUseEffect';
+import { mydemo, FormatDate, ShowText } from './MyUseEffect';
 import './style.css';
 import { useState, useReducer, useEffect } from 'react';
 import { FC, ReactElement } from 'react';
@@ -40,6 +40,7 @@ const App = () => {
 
 function UseEffect() {
   mydemo();
+  //FormatDate();
 }
 
 function UseEffectx() {
