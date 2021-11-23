@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState, useReducer, useEffect } from 'react';
+import { FC, ReactElement } from 'react';
+
 
 export function mydemo() {
   // logic will go here ..
@@ -8,6 +10,13 @@ export function mydemo() {
   useEffect(() => {
     console.log('You clicked ' + count + ' times wow');
   }, []);
+
+  type ChildProps = {
+    name: string,
+    id: number,
+    bio?: string,
+  }
+  
 
   return <div>{'xxx'}</div>;
 
