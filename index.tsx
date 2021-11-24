@@ -29,18 +29,18 @@ const addit = (x: number, y: number) => {
 
 const App = () => {
   return (
-    <div >
+    <div>
       <div style={{ backgroundColor: 'coral' }}>
-        <p>Hooks useState</p>
+        <p style={{ color: 'blue' }}>Hooks useState</p>
         {hooks()}
-        <p>Hooks useEffect</p>
+        <p style={{ color: 'blue' }}>Hooks useEffect</p>
         {UseEffect()}
       </div>
 
       <div style={{ backgroundColor: 'coral' }}>
-        <p>Hooks useState</p>
+        <p style={{ color: 'blue' }}>Hooks useState</p>
         {hooks()}
-        <p>Hooks useEffect</p>
+        <p style={{ color: 'blue' }}>Hooks useEffect</p>
         {UseEffect()}
       </div>
     </div>
