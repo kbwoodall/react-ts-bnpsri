@@ -27,8 +27,7 @@ export function mydemo():JSX.Element |null {
   useEffect(() => {
     console.log('You clicked ' + count + ' times wow');
   }, []);
-  //const App = ({ message }: AppProps): JSX.Element => <div>{message}</div>;
-
+  
   return (
     <div>
       <p style={{ color: 'blue' }}>You clicked {count} times again</p>
@@ -37,6 +36,8 @@ export function mydemo():JSX.Element |null {
   );
 
   /*
+
+  //const App = ({ message }: AppProps): JSX.Element => <div>{message}</div>;
 
 interface FooProp {
   name: string;
