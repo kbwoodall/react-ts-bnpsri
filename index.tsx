@@ -39,7 +39,7 @@ const App = () => {
 };
 
 function UseEffect() {
-  mydemo();
+  return mydemo();
   let msg: string = 'Wassup from ShowText';
   return ShowText({ msg });
 }
