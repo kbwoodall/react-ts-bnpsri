@@ -40,7 +40,7 @@ const App = () => {
 
 function UseEffect() {
   mydemo();
-  let msg: string = 'wassup from ShowText';
+  let msg: string = 'Wassup from ShowText';
   return ShowText({ msg });
 }
 

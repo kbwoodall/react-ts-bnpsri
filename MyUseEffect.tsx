@@ -17,7 +17,7 @@ export function ShowText({ msg }): JSX.Element | null {
   //if (show) {
   console.log('in ShowText ' + msg);
 
-  return (<div>{msg}</div>);
+  return (<p style={{ color: 'blue' }}>{msg}</p>);
   //}
   //return null;
 }
