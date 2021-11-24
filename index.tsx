@@ -29,7 +29,7 @@ const addit = (x: number, y: number) => {
 
 const App = () => {
   return (
-    <div>
+    <div >
       <div style={{ backgroundColor: 'coral' }}>
         <p style={{ color: 'blue' }}>Hooks useState</p>
         {hooks()}
