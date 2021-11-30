@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import { mydemo, FormatDate, ShowText } from './MyUseEffect';
+import { mydemo, FormatDate, showText } from './MyUseEffect';
 import './style.css';
 import { useState, useReducer, useEffect } from 'react';
 import { FC, ReactElement } from 'react';
@@ -10,6 +10,7 @@ const hooks = () => {
   const [count, setCount] = useState(0);
   return (
     <div>
+      {showText('ok in showText')}
       <p style={{ color: 'blue' }}>You clicked {count} times first</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>

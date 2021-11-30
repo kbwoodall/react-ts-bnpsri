@@ -13,8 +13,8 @@ export function FormatDate({ date }: FormatDateProps): JSX.Element {
 interface ShowTextProps {
   text: string;
 }
-
-export function ShowText({ msg }): JSX.Element | null {
+//export function showText({ msg: string }): JSX.Element | null {
+export function showText( msg: string ) {
   //if (show) {
   console.log('in ShowText ' + msg);
   return <p style={{ color: 'blue' }}>{msg}</p>;
