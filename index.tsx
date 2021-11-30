@@ -11,7 +11,7 @@ const hooks = () => {
   return (
     <div>
       {showText('ok in showText')}
-
+      {formatDate()}
       <p style={{ color: 'blue' }}>You clicked {count} times first</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>

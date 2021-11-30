@@ -1,24 +1,22 @@
 import React from 'react';
 import { useState, useReducer, useEffect } from 'react';
+import moment from 'moment';
 import { FC, ReactElement } from 'react';
 
 interface FormatDateProps {
   date: Date;
 }
-
-export function formatDate(date: Date) {
-  console.log('in FormatDate ' + { date });
-  return <p>{date.toLocaleString()}</p>;
+export function formatDate() {
+  const dt = moment().format('MMMM Do YYYY, h:mm:ss a');
+  console.log('in formatDate ' + dt);
+  return <p style={{ color: 'blue' }}> {dt}</p>;
 }
 interface ShowTextProps {
-  text: string;
+  msg: string;
 }
 export function showText(msg: string) {
-  //if (show) {
   console.log('in ShowText ' + msg);
   return <p style={{ color: 'blue' }}>{msg}</p>;
-  //}
-  //return null;
 }
 export function mydemo(): JSX.Element | null {
   console.log('this is exportable function in TypeScript. !!');
@@ -37,6 +35,11 @@ export function mydemo(): JSX.Element | null {
 
   /*
 
+   //if (show) {
+  console.log('in ShowText ' + msg);
+  return <p style={{ color: 'blue' }}>{msg}</p>;
+  //}
+  //return null;
   //const App = ({ message }: AppProps): JSX.Element => <div>{message}</div>;
 
 interface FooProp {
