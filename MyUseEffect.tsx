@@ -6,29 +6,28 @@ interface FormatDateProps {
   date: Date;
 }
 
-export function FormatDate({ date }: FormatDateProps): JSX.Element {
-  console.log('in FormatDate ' + {date});
-  return <div>{date.toLocaleString()}</div>;
+export function formatDate(date: Date) {
+  console.log('in FormatDate ' + { date });
+  return <p>{date.toLocaleString()}</p>;
 }
 interface ShowTextProps {
   text: string;
 }
-//export function showText({ msg: string }): JSX.Element | null {
-export function showText( msg: string ) {
+export function showText(msg: string) {
   //if (show) {
   console.log('in ShowText ' + msg);
   return <p style={{ color: 'blue' }}>{msg}</p>;
   //}
   //return null;
 }
-export function mydemo():JSX.Element |null {
+export function mydemo(): JSX.Element | null {
   console.log('this is exportable function in TypeScript. !!');
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     console.log('You clicked ' + count + ' times wow');
   }, []);
-  
+
   return (
     <div>
       <p style={{ color: 'blue' }}>You clicked {count} times again</p>
