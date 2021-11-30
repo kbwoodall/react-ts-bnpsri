@@ -7,6 +7,7 @@ interface FormatDateProps {
 }
 
 export function FormatDate({ date }: FormatDateProps): JSX.Element {
+  console.log('in FormatDate ' + {date});
   return <div>{date.toLocaleString()}</div>;
 }
 interface ShowTextProps {
