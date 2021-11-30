@@ -8,9 +8,11 @@ import { FC, ReactElement } from 'react';
 
 const hooks = () => {
   const [count, setCount] = useState(0);
+  let myObj = { msg: 'Message from hooks' };
+
   return (
     <div>
-      {showText('ok in showText')}
+      {showText(myObj)}
       {formatDate()}
       <p style={{ color: 'blue' }}>You clicked {count} times first</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
@@ -51,8 +53,6 @@ const App = () => {
 
 function UseEffect() {
   return mydemo();
-  let msg: string = 'Wassup from ShowText';
-  return ShowText({ msg });
 }
 
 render(<App />, document.getElementById('root'));

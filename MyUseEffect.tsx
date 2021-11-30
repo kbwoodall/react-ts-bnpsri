@@ -14,9 +14,9 @@ export function formatDate() {
 interface ShowTextProps {
   msg: string;
 }
-export function showText(msg: string) {
-  console.log('in ShowText ' + msg);
-  return <p style={{ color: 'blue' }}>{msg}</p>;
+export function showText(imsg: ShowTextProps) {
+  console.log('in ShowText ' + imsg.msg);
+  return <p style={{ color: 'blue' }}> {imsg.msg}</p>;
 }
 export function mydemo(): JSX.Element | null {
   console.log('this is exportable function in TypeScript. !!');
