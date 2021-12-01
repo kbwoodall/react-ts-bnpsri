@@ -30,10 +30,39 @@ const showme = (msg: string) => {
 const addit = (x: number, y: number) => {
   return <p>return (x*y);</p>;
 };
+const CStyle = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  width: 800,
+  //backgroundColor: 'gray'
+};
+const Flex = (props) => (
+  <div
+    className={props.className}
+    style={{
+      display: props.container ? 'flex' : 'block',
+      justifyContent: props.justifyContent || 'flex-start',
+      flexDirection: props.flexDirection || 'row',
+      flexGrow: props.flexGrow || 0,
+      flexBasis: props.flexBasis || 'auto',
+      flexShrink: props.flexShrink || 1,
+      flexWrap: props.flexWrap || 'nowrap',
+      flex: props.flex || '0 1 auto',
+      alignItems: props.alignItems || 'stretch',
+      margin: props.margin || '0',
+      padding: props.padding || '0',
+      width: props.width || 'auto',
+      height: props.height || 'auto',
+      maxWidth: props.maxWidth || 'none',
+    }}
+  >
+    {props.children}
+  </div>
+);
 
 const App = () => {
   return (
-    <div>
+    <div style={CStyle}>
       <div style={{ backgroundColor: 'coral' }}>
         <p style={{ color: 'blue' }}>Hooks useState</p>
         {hooks()}
@@ -47,7 +76,13 @@ const App = () => {
         <p style={{ color: 'blue' }}>Hooks useEffect</p>
         {UseEffect()}
       </div>
-    </div>
+      <div style={{ backgroundColor: 'coral' }}>
+        <p style={{ color: 'blue' }}>Hooks useState</p>
+        {hooks()}
+        <p style={{ color: 'blue' }}>Hooks useEffect</p>
+        {UseEffect()}
+      </div>
+      </div>
   );
 };
 
