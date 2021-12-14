@@ -8,7 +8,7 @@ import { FC, ReactElement } from 'react';
 
 const hooks = () => {
   const [count, setCount] = useState(0);
-  let myObj = { msg: 'Message from hooks' };
+  let myObj = { msg: 'Current Message from hooks' };
 
   return (
     <div>
