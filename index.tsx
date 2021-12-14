@@ -41,7 +41,7 @@ const CStyle = {
 
 const App = () => {
   return (
-    <div style={CStyle}>
+    <div className="flex justify-start bg-green-200 h-screen ">
       <div style={{ backgroundColor: 'coral' }}>
         <p style={{ color: 'blue' }}>Hooks useState</p>
         {hooks()}
