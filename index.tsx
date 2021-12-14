@@ -16,7 +16,7 @@ const hooks = () => {
       {formatDate()}
       <p className="text-lg font-bold m-15"> testing </p>
 
-      <p style={{ color: 'blue' }}>You clicked {count} times first</p>
+      <p className="text-lg font-bold m-5">You clicked {count} times first</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
