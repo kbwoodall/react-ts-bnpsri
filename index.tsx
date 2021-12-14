@@ -42,23 +42,10 @@ const CStyle = {
 const App = () => {
   return (
     <div className="flex justify-start bg-green-200 h-screen ">
-      <div style={{ backgroundColor: 'coral' }}>
-        <p style={{ color: 'blue' }}>Hooks useState</p>
+      <div className="bg-blue-200 ">
+        <p className="bg-blue-400">Hooks useState</p>
         {hooks()}
-        <p style={{ color: 'blue' }}>Hooks useEffect</p>
-        {UseEffect()}
-      </div>
-
-      <div style={{ backgroundColor: 'coral' }}>
-        <p style={{ color: 'blue' }}>Hooks useState</p>
-        {hooks()}
-        <p style={{ color: 'blue' }}>Hooks useEffect</p>
-        {UseEffect()}
-      </div>
-      <div style={{ backgroundColor: 'coral' }}>
-        <p style={{ color: 'blue' }}>Hooks useState</p>
-        {hooks()}
-        <p style={{ color: 'blue' }}>Hooks useEffect</p>
+        <p className="bg-blue-400">Hooks useEffect</p>
         {UseEffect()}
       </div>
     </div>
