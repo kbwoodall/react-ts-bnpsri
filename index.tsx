@@ -45,8 +45,8 @@ const App = () => {
       <div className="bg-blue-200 ml-10 rounded-xl">
         <p className="text-lg">Hooks useState</p>
         {hooks()}
-        </div>
-        <div className="bg-gray-200 ml-10 rounded-xl">
+      </div>
+      <div className="bg-gray-200 ml-10 rounded-xl w-3/6">
         <p className="text-lg">Hooks useEffect</p>
         {UseEffect()}
       </div>
