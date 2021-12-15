@@ -9,14 +9,14 @@ interface FormatDateProps {
 export function formatDate() {
   const dt = moment().format('MMMM Do YYYY, h:mm:ss a');
   console.log('in formatDate ' + dt);
-  return <p style={{ color: 'blue' }}> {dt}</p>;
+  return <p className="text-lg font-bold m-5"> {dt}</p>;
 }
 interface ShowTextProps {
   msg: string;
 }
 export function showText(imsg: ShowTextProps) {
   console.log('in ShowText ' + imsg.msg);
-  return <p style={{ color: 'blue' }}> {imsg.msg}</p>;
+  return <p className="text-lg font-bold m-5"> {imsg.msg}</p>;
 }
 export function mydemo(): JSX.Element | null {
   console.log('this is exportable function in TypeScript. !!');
@@ -28,7 +28,7 @@ export function mydemo(): JSX.Element | null {
 
   return (
     <div>
-      <p style={{ color: 'blue' }}>You clicked {count} times again</p>
+      <p className="text-lg font-bold m-5">You clicked {count} times again</p>
       <button onClick={() => setCount(count + 1)}>Click me again</button>
     </div>
   );
