@@ -42,11 +42,11 @@ const CStyle = {
 const App = () => {
   return (
     <div className="flex bg-green-400 h-screen ">
-      <div className="bg-blue-200 ml-10">
+      <div className="bg-blue-200 ml-10 rounded-xl">
         <p className="text-lg">Hooks useState</p>
         {hooks()}
         </div>
-        <div className="bg-gray-200 ml-10">
+        <div className="bg-gray-200 ml-10 rounded-xl">
         <p className="text-lg">Hooks useEffect</p>
         {UseEffect()}
       </div>
