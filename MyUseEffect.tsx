@@ -29,7 +29,7 @@ export function mydemo(): JSX.Element | null {
   return (
     <div>
       <p className="text-lg font-bold m-5">You clicked {count} times again</p>
-      <button onClick={() => setCount(count + 1)}>Click me again</button>
+      <button  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setCount(count + 1)}>Click me again</button>
     </div>
   );
 

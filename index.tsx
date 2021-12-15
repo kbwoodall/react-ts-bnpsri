@@ -17,7 +17,12 @@ const hooks = () => {
       <p className="text-lg font-bold m-15"> testing </p>
 
       <p className="text-lg font-bold m-5">You clicked {count} times first</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={() => setCount(count + 1)}
+      >
+        Click me
+      </button>
     </div>
   );
 };
@@ -42,18 +47,18 @@ const CStyle = {
 const App = () => {
   return (
     <div className="flex bg-green-400 h-screen ">
-      <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 mr-5">
+      <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5">
         <p className="text-lg">Hooks useState</p>
         {hooks()}
       </div>
 
-      <div className=" rounded-xl mt-10 mb-10 mr-5">
-        <input type="text" />
-        <button type="button">
-          Show result
-        </button>
+      <div className="text-black font-bold rounded mt-10 ml-5">
+        <div>
+          <input type="text" />
+        </div>
+        <button type="button">Show result</button>
       </div>
-      <div className="bg-gray-200 rounded-xl w-3/6 mt-10 mb-10">
+      <div className="bg-gray-200 rounded-xl w-3/6 mt-10 mb-10 ml-5">
         <p className="text-lg">Hooks useEffect</p>
         {UseEffect()}
       </div>
