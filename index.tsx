@@ -56,7 +56,7 @@ const App = () => {
         <div>
           <input type="text" />
         </div>
-        <button type="button">Show result</button>
+        <button type="button"   onClick={() => alert("wassup")}>Show result</button>
       </div>
       <div className="bg-gray-200 rounded-xl w-3/6 mt-10 mb-10 ml-5">
         <p className="text-lg">Hooks useEffect</p>
