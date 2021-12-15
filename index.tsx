@@ -36,7 +36,7 @@ const CStyle = {
   display: 'flex',
   justifyContent: 'space-between',
   width: 800,
-  //backgroundColor: 'gray'
+  backgroundColor: 'gray'
 };
 
 const App = () => {
@@ -47,7 +47,7 @@ const App = () => {
         {hooks()}
       </div>
 
-      <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 mr-5">
+      <div className=" ml-10 rounded-xl mt-10 mb-10">
         <input type="text" />
         <button type="button" className="text-blue-800 ">
           Show result
