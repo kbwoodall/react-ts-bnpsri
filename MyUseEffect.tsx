@@ -19,7 +19,7 @@ export function showText(imsg: ShowTextProps) {
   return <p className="text-lg font-bold m-5"> {imsg.msg}</p>;
 }
 export function mydemo(): JSX.Element | null {
-  console.log('this is exportable function in TypeScript. !!');
+  console.log('this is a exportable function in TypeScript. !!');
   const [count, setCount] = useState(0);
 
   useEffect(() => {
