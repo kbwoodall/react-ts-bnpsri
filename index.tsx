@@ -77,3 +77,13 @@ function UseEffect() {
 }
 
 render(<App />, document.getElementById('root'));
+
+
+
+/*
+
+ <input type="email" value={this.state.email}
+          	onChange={this.handleEmail}/>
+
+
+*/
