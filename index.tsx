@@ -34,6 +34,10 @@ const showme = (msg: string) => {
   );
 };
 
+const hey = () => {
+  alert('ok so far');
+};
+
 const addit = (x: number, y: number) => {
   return <p>return (x*y);</p>;
 };
@@ -56,7 +60,9 @@ const App = () => {
         <div>
           <input type="text" />
         </div>
-        <button type="button"   onClick={() => alert("wassup")}>Show result</button>
+        <button type="button" onClick={() => hey()}>
+          Show result
+        </button>
       </div>
       <div className="bg-gray-200 rounded-xl w-3/6 mt-10 mb-10 ml-5">
         <p className="text-lg">Hooks useEffect</p>
