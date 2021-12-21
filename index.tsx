@@ -6,6 +6,10 @@ import './style.css';
 import { useState, useReducer, useEffect } from 'react';
 import { FC, ReactElement } from 'react';
 
+const hey = (msg: string) => {
+  alert('ok so far ' + msg);
+};
+
 const App = () => {
   const [title, setTitle] = useState('');
 
