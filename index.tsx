@@ -10,13 +10,21 @@ const hey = (msg: string) => {
   alert('ok so far ' + msg);
 };
 
+const showme = (msg: string) => {
+  return (
+    <div>
+      <p>{msg}</p>
+    </div>
+  );
+};
+
 const App = () => {
   const [title, setTitle] = useState('');
 
   return (
     <div className="flex bg-green-400 h-screen ">
       <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5">
-        <p className="text-lg">Hooks useState</p>
+        <p className="text-lg">{showme('ok so far')}</p>
         {myhooks()}
       </div>
 
@@ -29,7 +37,7 @@ const App = () => {
         </button>
       </div>
       <div className="bg-gray-200 rounded-xl w-3/6 mt-10 mb-10 ml-5 mr-5">
-        <p className="text-lg">Hooks useEffect</p>
+        <p className="text-lg">{showme('Hooks useEffect')}</p>
         {mydemo()}
       </div>
     </div>
