@@ -34,8 +34,8 @@ const showme = (msg: string) => {
   );
 };
 
-const hey = () => {
-  alert('ok so far');
+const hey = (msg: string) => {
+  alert('ok so far ' + msg);
 };
 
 const addit = (x: number, y: number) => {
@@ -49,6 +49,8 @@ const CStyle = {
 };
 
 const App = () => {
+  const [title, setTitle] = useState('');
+
   return (
     <div className="flex bg-green-400 h-screen ">
       <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5">
@@ -58,9 +60,9 @@ const App = () => {
 
       <div className="text-black font-bold rounded mt-10 ml-5">
         <div>
-          <input type="text" />
+          <input onChange={(event) => setTitle(event.target.value)} />
         </div>
-        <button type="button" onClick={() => hey()}>
+        <button type="button" onClick={() => hey(title)}>
           Show result
         </button>
       </div>
@@ -77,8 +79,6 @@ function UseEffect() {
 }
 
 render(<App />, document.getElementById('root'));
-
-
 
 /*
 
