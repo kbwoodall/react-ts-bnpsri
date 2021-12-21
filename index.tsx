@@ -48,7 +48,7 @@ const App = () => {
       </div>
       <div className="bg-gray-200 rounded-xl w-3/6 mt-10 mb-10 ml-5 mr-5">
         <p className="text-lg">Hooks useEffect</p>
-        {UseEffect()}
+        {mydemo()}
       </div>
     </div>
   );
