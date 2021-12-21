@@ -60,7 +60,7 @@ const App = () => {
 
       <div className="text-black font-bold rounded mt-10 ml-5">
         <div>
-          <input onChange={(event) => setTitle(event.target.value)} />
+          <input onChange={(me) => setTitle(me.target.value)} />
         </div>
         <button type="button" onClick={() => hey(title)}>
           Show result
