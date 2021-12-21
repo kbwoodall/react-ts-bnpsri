@@ -6,28 +6,6 @@ import './style.css';
 import { useState, useReducer, useEffect } from 'react';
 import { FC, ReactElement } from 'react';
 
-const showme = (msg: string) => {
-  return (
-    <div>
-      <p>{msg}</p>
-    </div>
-  );
-};
-
-const hey = (msg: string) => {
-  alert('ok so far ' + msg);
-};
-
-const addit = (x: number, y: number) => {
-  return <p>return (x*y);</p>;
-};
-const CStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  width: 800,
-  backgroundColor: 'gray',
-};
-
 const App = () => {
   const [title, setTitle] = useState('');
 
@@ -54,13 +32,37 @@ const App = () => {
   );
 };
 
-function UseEffect() {
-  return mydemo();
-}
-
 render(<App />, document.getElementById('root'));
 
 /*
+
+const showme = (msg: string) => {
+  return (
+    <div>
+      <p>{msg}</p>
+    </div>
+  );
+};
+
+const hey = (msg: string) => {
+  alert('ok so far ' + msg);
+};
+
+
+
+  const addit = (x: number, y: number) => {
+  return <p>return (x*y);</p>;
+};
+const CStyle = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  width: 800,
+  backgroundColor: 'gray',
+};  
+
+  function UseEffect() {
+  return mydemo();
+}
 
  <input type="email" value={this.state.email}
           	onChange={this.handleEmail}/>
