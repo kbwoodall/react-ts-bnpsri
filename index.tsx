@@ -6,6 +6,11 @@ import './style.css';
 import { useState, useReducer, useEffect } from 'react';
 import { FC, ReactElement } from 'react';
 
+import { createContext, useContext } from 'react';
+import ReactDOM from 'react-dom';
+
+const UserContext = createContext();
+
 const hey = (msg: string) => {
   alert('ok so far ' + msg);
 };
@@ -20,6 +25,7 @@ const showme = (msg: string) => {
 
 const App = () => {
   const [title, setTitle] = useState('');
+  const [user, setUser] = useState("Jesse Hall");
 
   return (
     <div className="flex bg-green-400 h-screen ">
