@@ -25,7 +25,7 @@ const showme = (msg: string) => {
 
 const App = () => {
   const [title, setTitle] = useState('');
-  const [user, setUser] = useState('Jesse Hall');
+  const [user, setUser] = useState('Abe Lincoln');
 
   return (
     <UserContext.Provider value={user}>
@@ -33,6 +33,8 @@ const App = () => {
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5">
           <p className="text-lg">{showme('ok so far')}</p>
           {myhooks()}
+
+          <h1>{`Hello ${user}!`}</h1>
         </div>
 
         <div className="text-black font-bold rounded mt-10 ml-5">
