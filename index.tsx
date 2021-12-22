@@ -25,28 +25,30 @@ const showme = (msg: string) => {
 
 const App = () => {
   const [title, setTitle] = useState('');
-  const [user, setUser] = useState("Jesse Hall");
+  const [user, setUser] = useState('Jesse Hall');
 
   return (
-    <div className="flex bg-green-400 h-screen ">
-      <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5">
-        <p className="text-lg">{showme('ok so far')}</p>
-        {myhooks()}
-      </div>
-
-      <div className="text-black font-bold rounded mt-10 ml-5">
-        <div>
-          <input onChange={(me) => setTitle(me.target.value)} />
+    <UserContext.Provider value={user}>
+      <div className="flex bg-green-400 h-screen ">
+        <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5">
+          <p className="text-lg">{showme('ok so far')}</p>
+          {myhooks()}
         </div>
-        <button type="button" onClick={() => hey(title)}>
-          Show result
-        </button>
+
+        <div className="text-black font-bold rounded mt-10 ml-5">
+          <div>
+            <input onChange={(me) => setTitle(me.target.value)} />
+          </div>
+          <button type="button" onClick={() => hey(title)}>
+            Show result
+          </button>
+        </div>
+        <div className="bg-gray-200 rounded-xl w-3/6 mt-10 mb-10 ml-5 mr-5">
+          <p className="text-lg">{showme('Hooks useEffect')}</p>
+          {mydemo()}
+        </div>
       </div>
-      <div className="bg-gray-200 rounded-xl w-3/6 mt-10 mb-10 ml-5 mr-5">
-        <p className="text-lg">{showme('Hooks useEffect')}</p>
-        {mydemo()}
-      </div>
-    </div>
+    </UserContext.Provider>
   );
 };
 
