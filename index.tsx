@@ -8,8 +8,7 @@ import { FC, ReactElement } from 'react';
 
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
-
-const UserContext = createContext();
+const UserContext = createContext('Default Value');
 
 const hey = (msg: string) => {
   alert('ok so far ' + msg);
