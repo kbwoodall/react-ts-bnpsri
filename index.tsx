@@ -8,7 +8,6 @@ import { FC, ReactElement } from 'react';
 
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
-const UserContext = createContext('Default Value');
 
 const hey = (msg: string) => {
   alert('ok so far ' + msg);
@@ -24,8 +23,10 @@ const showme = (msg: string) => {
 
 const App = () => {
   const [title, setTitle] = useState('');
-  const [user, setUser] = useState('Abe Lincoln');
+  const [user, setUser] = useState('Abe Lincoln again');
+  const UserContext = createContext(user);
 
+  const value2 = useContext(UserContext);
   return (
     <UserContext.Provider value={user}>
       <div className="flex bg-green-400 h-screen ">
@@ -33,7 +34,7 @@ const App = () => {
           <p className="text-lg">{showme('ok so far')}</p>
           {myhooks()}
 
-          <h1>{`Hello ${user}!`}</h1>
+          <p className="text-lg">Hello {value2}</p>
         </div>
 
         <div className="text-black font-bold rounded mt-10 ml-5">
