@@ -23,7 +23,7 @@ const showme = (msg: string) => {
 
 const App = () => {
   const [title, setTitle] = useState('new stuff');
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState('K Woodall');
   const UserContext = createContext(user);
   const value2 = useContext(UserContext);
 
@@ -33,6 +33,29 @@ const App = () => {
     //alert(enteredName);
   };
 
+  function MyForm() {
+    const [name, setName] = useState('');
+
+    const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
+      event.preventDefault();
+      alert('The name you entered was:  ' + name);
+    };
+
+    return (
+      <form onSubmit={handleSubmit}>
+        <label>
+          Enter your name:
+          <input className="mb-5"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <input type="submit" />
+      </form>
+    );
+  }
+
   return (
     <UserContext.Provider value={user}>
       <div className="flex bg-green-400 h-screen ">
@@ -40,19 +63,15 @@ const App = () => {
           <p className="text-lg">{showme('ok so far')}</p>
           {myhooks()}
 
-          <p className="text-lg">Hello {user}</p>
+          <p className="text-lg mt-10">Hello {user}</p>
         </div>
 
         <div className="text-black font-bold rounded mt-10 ml-5 mr-5">
           <div>
-            <input className="mb-5" id={title} />
+            <MyForm />
           </div>
-
-          <button type="button" onClick={() => setUser(title)}>
-            Show result
-          </button>
         </div>
-        <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-4/6 mr-10">
+        <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-4/6 mr-10 ml-5">
           <p className="text-lg">{showme('Hooks useEffect')}</p>
           {mydemo()}
         </div>
@@ -64,6 +83,11 @@ const App = () => {
 render(<App />, document.getElementById('root'));
 
 /*
+
+
+ <button type="button" onClick={() => setUser(title)}>
+            Show result
+          </button>
 <input
               className="mb-5"
               onChange={(event) => setUser(event.target.value)}
