@@ -51,11 +51,14 @@ const App = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
+          <button
+            className="mb-5 ml-2"
+            type="button"
+            onClick={() => alert(name)}
+          >
+            Show result
+          </button>
         </label>
-
-        <button type="button" onClick={() => alert(name)} >
-          Show result
-        </button>
       </form>
     );
   }
@@ -70,12 +73,12 @@ const App = () => {
           <p className="text-lg mt-10">Hello {user}</p>
         </div>
 
-        <div className="text-black font-bold rounded mt-10 ml-5 mr-5">
+        <div className="text-black font-bold rounded mt-10 ml-5">
           <div>
             <MyForm />
           </div>
         </div>
-        <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-4/6 mr-10 ml-5">
+        <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-5/6 mr-10">
           <p className="text-lg">{showme('Hooks useEffect')}</p>
           {mydemo()}
         </div>
