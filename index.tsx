@@ -46,18 +46,16 @@ const App = () => {
         <label>
           Enter your name:
           <input
-            className="mb-5"
+            className="mb-2"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </label>
-        <input type="submit" />
 
-        <button type="button" onClick={() => handleSubmit}  className="mb-5">
-            Show result
-          </button>
-
+        <button type="button" onClick={() => alert(name)} >
+          Show result
+        </button>
       </form>
     );
   }
@@ -89,7 +87,7 @@ const App = () => {
 render(<App />, document.getElementById('root'));
 
 /*
-
+<input type="submit" />
 
  <button type="button" onClick={() => setUser(title)}>
             Show result
