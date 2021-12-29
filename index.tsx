@@ -45,13 +45,19 @@ const App = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Enter your name:
-          <input className="mb-5"
+          <input
+            className="mb-5"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </label>
         <input type="submit" />
+
+        <button type="button" onClick={() => handleSubmit}  className="mb-5">
+            Show result
+          </button>
+
       </form>
     );
   }
