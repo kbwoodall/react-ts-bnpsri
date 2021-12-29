@@ -22,17 +22,16 @@ const showme = (msg: string) => {
 };
 
 const App = () => {
-  const [title, setTitle] = useState('');
-  const [user, setUser] = useState('Abe Lincoln again maybe');
+  const [title, setTitle] = useState('new stuff');
+  const [user, setUser] = useState('');
   const UserContext = createContext(user);
   const value2 = useContext(UserContext);
 
   const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const enteredName = event.target.value;
     setUser(enteredName);
+    //alert(enteredName);
   };
-
-  //<input onChange={(event) => alert(event.target.value)} />
 
   return (
     <UserContext.Provider value={user}>
@@ -41,14 +40,15 @@ const App = () => {
           <p className="text-lg">{showme('ok so far')}</p>
           {myhooks()}
 
-          <p className="text-lg">Hello {value2}</p>
+          <p className="text-lg">Hello {user}</p>
         </div>
 
-        <div className="text-black font-bold rounded mt-10 ml-5">
+        <div className="text-black font-bold rounded mt-10 ml-5 mr-5">
           <div>
-            <input value={user} onChange={inputHandler} />
+            <input className="mb-5" id={title} />
           </div>
-          <button type="button" onClick={() => hey(title)}>
+
+          <button type="button" onClick={() => setUser(title)}>
             Show result
           </button>
         </div>
@@ -64,6 +64,11 @@ const App = () => {
 render(<App />, document.getElementById('root'));
 
 /*
+<input
+              className="mb-5"
+              onChange={(event) => setUser(event.target.value)}
+            />
+
 
 const showme = (msg: string) => {
   return (
