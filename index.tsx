@@ -52,7 +52,7 @@ const App = () => {
             Show result
           </button>
         </div>
-        <div className="bg-gray-200 rounded-xl w-3/6 mt-10 mb-10 ml-5 mr-5">
+        <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-4/6 mr-10">
           <p className="text-lg">{showme('Hooks useEffect')}</p>
           {mydemo()}
         </div>
