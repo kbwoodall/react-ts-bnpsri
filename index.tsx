@@ -25,8 +25,8 @@ const App = () => {
   const [title, setTitle] = useState('');
   const [user, setUser] = useState('Abe Lincoln again');
   const UserContext = createContext(user);
-
   const value2 = useContext(UserContext);
+
   return (
     <UserContext.Provider value={user}>
       <div className="flex bg-green-400 h-screen ">
@@ -39,7 +39,7 @@ const App = () => {
 
         <div className="text-black font-bold rounded mt-10 ml-5">
           <div>
-            <input onChange={(me) => setTitle(me.target.value)} />
+            <input onChange={(event) => alert(event.target.value)} />
           </div>
           <button type="button" onClick={() => hey(title)}>
             Show result

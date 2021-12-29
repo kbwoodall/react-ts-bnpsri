@@ -37,8 +37,29 @@ export function mydemo(): JSX.Element | null {
       </button>
     </div>
   );
+}
+export function myhooks(): JSX.Element | null {
+  const [count, setCount] = useState(0);
+  let myObj = { msg: 'Current Message from hooks' };
 
-  /*
+  return (
+    <div>
+      {showText(myObj)}
+      {formatDate()}
+      <p className="text-lg font-bold m-15"> testing </p>
+
+      <p className="text-lg font-bold m-5">You clicked {count} times first</p>
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={() => setCount(count + 1)}
+      >
+        Click me
+      </button>
+    </div>
+  );
+}
+
+/*
   function myhooks(): JSX.Element | null {
 
     const [count, setCount] = useState(0);
@@ -89,25 +110,3 @@ test
 
       const MyComponent: FC = () => { <>...</> }
 */
-}
-export function myhooks(): JSX.Element | null {
-
-  const [count, setCount] = useState(0);
-  let myObj = { msg: 'Current Message from hooks' };
-
-  return (
-    <div>
-      {showText(myObj)}
-      {formatDate()}
-      <p className="text-lg font-bold m-15"> testing </p>
-
-      <p className="text-lg font-bold m-5">You clicked {count} times first</p>
-      <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={() => setCount(count + 1)}
-      >
-        Click me
-      </button>
-    </div>
-  );
-};
