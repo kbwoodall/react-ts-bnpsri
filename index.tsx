@@ -27,6 +27,13 @@ const App = () => {
   const UserContext = createContext(user);
   const value2 = useContext(UserContext);
 
+  const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const enteredName = event.target.value;
+    setUser(enteredName);
+  };
+
+  //<input onChange={(event) => alert(event.target.value)} />
+
   return (
     <UserContext.Provider value={user}>
       <div className="flex bg-green-400 h-screen ">
@@ -39,7 +46,7 @@ const App = () => {
 
         <div className="text-black font-bold rounded mt-10 ml-5">
           <div>
-            <input onChange={(event) => alert(event.target.value)} />
+            <input value={user} onChange={inputHandler} />
           </div>
           <button type="button" onClick={() => hey(title)}>
             Show result
