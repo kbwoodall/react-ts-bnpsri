@@ -9,10 +9,6 @@ import { FC, ReactElement } from 'react';
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
-const hey = (msg: string) => {
-  alert('ok so far ' + msg);
-};
-
 const showme = (msg: string) => {
   return (
     <div>
@@ -26,6 +22,11 @@ const App = () => {
   const [user, setUser] = useState('K Woodall');
   const UserContext = createContext(user);
   const value2 = useContext(UserContext);
+
+  const hey = (msg: string) => {
+    setUser(msg);
+    alert('ok so far ' + msg);
+  };
 
   const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const enteredName = event.target.value;
@@ -51,11 +52,7 @@ const App = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <button
-            className="mb-5 ml-2"
-            type="button"
-            onClick={() => alert(name)}
-          >
+          <button className="mb-5 ml-2" type="button" onClick={() => hey(name)}>
             Show result
           </button>
         </label>
@@ -70,7 +67,7 @@ const App = () => {
           <p className="text-lg">{showme('ok so far')}</p>
           {myhooks()}
 
-          <p className="text-lg mt-10">Hello {user}</p>
+          <p className="text-lg mt-10">Hey {user}</p>
         </div>
 
         <div className="text-black font-bold rounded mt-10 ml-10">
