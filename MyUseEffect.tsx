@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useReducer, useEffect } from 'react';
 import moment from 'moment';
 import { FC, ReactElement } from 'react';
+import { createContext, useContext } from 'react';
 
 interface FormatDateProps {
   date: Date;
@@ -25,6 +26,11 @@ export function mydemo(): JSX.Element | null {
   useEffect(() => {
     console.log('You clicked ' + count + ' times wow');
   }, []);
+
+  function Display() {
+    //const value = useContext(useContext);
+    //return <div>The answer is {value}.</div>;
+  }
 
   return (
     <div>
