@@ -35,6 +35,13 @@ const App = () => {
   };
 
   function MyForm() {
+
+    function Display() {
+      const value = useContext(UserContext);
+      return <div>The answer is {value}.</div>;
+    }
+
+
     const [name, setName] = useState('');
 
     const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,6 +51,9 @@ const App = () => {
 
     return (
       <form onSubmit={handleSubmit}>
+
+        <Display/>
+        
         <label>
           Enter your name:
           <input
