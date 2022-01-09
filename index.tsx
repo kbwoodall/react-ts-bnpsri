@@ -21,7 +21,7 @@ const App = () => {
   const [title, setTitle] = useState('new stuff');
   const [user, setUser] = useState('K Woodall');
   const UserContext = createContext(user);
-  const value2 = useContext(UserContext);
+  //const value2 = useContext(UserContext);
 
   const hey = (msg: string) => {
     setUser(msg);
