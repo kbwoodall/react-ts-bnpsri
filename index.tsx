@@ -11,20 +11,24 @@ import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
 const App = () => {
-  const [user, setUser] = useState('K Woodall');
-  const UserContext = createContext(user);
+  const [info, setInfo] = useState('K Woodall');
+  const UserContext = createContext(info);
+
+  function Display() {
+    const value = useContext(UserContext);
+    return <div>The answer is {info}</div>;
+  }
 
   return (
-    <UserContext.Provider value={user}>
+    <UserContext.Provider value={info}>
       <div className="flex bg-green-400 h-screen ">
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
           {myhooks()}
-
-          <p className="text-lg mt-10">Hey {user}</p>
         </div>
 
         <div className="text-black font-bold rounded mt-10 ml-10">
           <div>
+            <Display />
             <MyFormStuff />
           </div>
         </div>
@@ -39,6 +43,8 @@ const App = () => {
 render(<App />, document.getElementById('root'));
 
 /*
+
+<p className="text-lg mt-10">Hey {user}</p>
 //const [title, setTitle] = useState('new stuff');
   //const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
   //  const enteredName = event.target.value;
