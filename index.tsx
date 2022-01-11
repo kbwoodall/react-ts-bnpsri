@@ -21,7 +21,6 @@ const App = () => {
   const [title, setTitle] = useState('new stuff');
   const [user, setUser] = useState('K Woodall');
   const UserContext = createContext(user);
-  //const value2 = useContext(UserContext);
 
   const hey = (msg: string) => {
     setUser(msg);
@@ -35,12 +34,10 @@ const App = () => {
   };
 
   function MyForm() {
-
     function Display() {
-      const value = useContext(UserContext);
-      return <div>The answer is {value}.</div>;
+      const rval = useContext(UserContext);
+      return <div>The answer is {rval}</div>;
     }
-
 
     const [name, setName] = useState('');
 
@@ -51,9 +48,8 @@ const App = () => {
 
     return (
       <form onSubmit={handleSubmit}>
+        <Display />
 
-        <Display/>
-        
         <label>
           Enter your name:
           <input
