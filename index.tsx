@@ -10,13 +10,15 @@ import { MyFormStuff } from './MyForm';
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
+import {LangContext, lang} from './MyContext'
+
 const App = () => {
   const [info, setInfo] = useState('K Woodall');
   const UserContext = createContext(info);
 
   function Display() {
-    const value = useContext(UserContext);
-    return <div>The info is {info}</div>;
+    const value = useContext(LangContext);
+    return <div>The info is {lang.en.stuff}</div>;
   }
 
   return (
