@@ -10,14 +10,6 @@ import { MyFormStuff } from './MyForm';
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
-const showme = (msg: string) => {
-  return (
-    <div>
-      <p>{msg}</p>
-    </div>
-  );
-};
-
 const App = () => {
   const [title, setTitle] = useState('new stuff');
   const [user, setUser] = useState('K Woodall');
@@ -25,7 +17,15 @@ const App = () => {
 
   const hey = (msg: string) => {
     setUser(msg);
-    alert('ok so far ' + msg);
+    alert('you entered' + msg);
+  };
+
+  const showme = (msg: string) => {
+    return (
+      <div>
+        <p>{msg}</p>
+      </div>
+    );
   };
 
   const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,8 +33,37 @@ const App = () => {
     setUser(enteredName);
     //alert(enteredName);
   };
-  /*
-  function MyForm() {
+
+  return (
+    <UserContext.Provider value={user}>
+      <div className="flex bg-green-400 h-screen ">
+        <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
+          <p className="text-lg">{showme('ok so far')}</p>
+          {myhooks()}
+
+          <p className="text-lg mt-10">Hey {user}</p>
+        </div>
+
+        <div className="text-black font-bold rounded mt-10 ml-10">
+          <div>
+            <MyFormStuff />
+          </div>
+        </div>
+        <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-5/6 mr-10">
+          <p className="text-lg">{showme('Hooks useEffect')}</p>
+          {mydemo()}
+        </div>
+      </div>
+    </UserContext.Provider>
+  );
+};
+
+render(<App />, document.getElementById('root'));
+
+/*
+
+
+ function MyForm() {
     function Display() {
       const rval = useContext(UserContext);
       return <div>The answer is {rval}</div>;
@@ -66,34 +95,8 @@ const App = () => {
       </form>
     );
   }
- */
-  return (
-    <UserContext.Provider value={user}>
-      <div className="flex bg-green-400 h-screen ">
-        <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
-          <p className="text-lg">{showme('ok so far')}</p>
-          {myhooks()}
 
-          <p className="text-lg mt-10">Hey {user}</p>
-        </div>
 
-        <div className="text-black font-bold rounded mt-10 ml-10">
-          <div>
-            <MyFormStuff />
-          </div>
-        </div>
-        <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-5/6 mr-10">
-          <p className="text-lg">{showme('Hooks useEffect')}</p>
-          {mydemo()}
-        </div>
-      </div>
-    </UserContext.Provider>
-  );
-};
-
-render(<App />, document.getElementById('root'));
-
-/*
 <input type="submit" />
 
  <button type="button" onClick={() => setUser(title)}>
