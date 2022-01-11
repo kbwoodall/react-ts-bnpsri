@@ -3,6 +3,7 @@ import { useState, useReducer, useEffect } from 'react';
 import moment from 'moment';
 import { FC, ReactElement } from 'react';
 import { createContext, useContext } from 'react';
+import { LangContext, data, DataContext, location } from './MyContext';
 
 interface FormatDateProps {
   date: Date;
@@ -28,12 +29,13 @@ export function mydemo(): JSX.Element | null {
   }, []);
 
   function Display() {
-    //const value = useContext(useContext);
-    //return <div>The answer is {value}.</div>;
+    const value = useContext(LangContext);
+    return <div className="text-lg font-bold m-5">The info is {value}</div>;
   }
 
   return (
     <div>
+      <Display/>
       <p className="text-lg font-bold m-5">You clicked {count} times again</p>
       <button
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -44,6 +46,7 @@ export function mydemo(): JSX.Element | null {
     </div>
   );
 }
+
 export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
   let myObj = { msg: 'Current Message from hooks' };
