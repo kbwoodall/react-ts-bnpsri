@@ -16,7 +16,7 @@ const App = () => {
 
   function Display() {
     const value = useContext(UserContext);
-    return <div>The answer is {info}</div>;
+    return <div>The info is {info}</div>;
   }
 
   return (
