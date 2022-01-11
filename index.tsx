@@ -10,7 +10,7 @@ import { MyFormStuff } from './MyForm';
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
-import {LangContext, lang} from './MyContext'
+import {LangContext, data, DataContext, location} from './MyContext'
 
 const App = () => {
   //const [info, setInfo] = useState('K Woodall');
@@ -18,11 +18,11 @@ const App = () => {
 
   function Display() {
     const value = useContext(LangContext);
-    return <div>The info is {lang.en.stuff}</div>;
+    return <div>The info is {value}</div>;
   }
 
   return (
-    <LangContext.Provider value={lang.en.stuff}>
+    <LangContext.Provider value={data.city}>
       <div className="flex bg-green-400 h-screen ">
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
           {myhooks()}
