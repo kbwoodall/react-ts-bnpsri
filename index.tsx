@@ -15,30 +15,10 @@ const App = () => {
   const [user, setUser] = useState('K Woodall');
   const UserContext = createContext(user);
 
-  const hey = (msg: string) => {
-    setUser(msg);
-    alert('you entered' + msg);
-  };
-
-  const showme = (msg: string) => {
-    return (
-      <div>
-        <p>{msg}</p>
-      </div>
-    );
-  };
-
-  const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const enteredName = event.target.value;
-    setUser(enteredName);
-    //alert(enteredName);
-  };
-
   return (
     <UserContext.Provider value={user}>
       <div className="flex bg-green-400 h-screen ">
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
-          <p className="text-lg">{showme('ok so far')}</p>
           {myhooks()}
 
           <p className="text-lg mt-10">Hey {user}</p>
@@ -50,7 +30,6 @@ const App = () => {
           </div>
         </div>
         <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-5/6 mr-10">
-          <p className="text-lg">{showme('Hooks useEffect')}</p>
           {mydemo()}
         </div>
       </div>
@@ -61,7 +40,27 @@ const App = () => {
 render(<App />, document.getElementById('root'));
 
 /*
+  //const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //  const enteredName = event.target.value;
+  //  setUser(enteredName);
+  //};
+  const showme = (msg: string) => {
+    return (
+      <div>
+        <p>{msg}</p>
+      </div>
+    );
+  };
 
+<p className="text-lg">{showme('Hooks useEffect')}</p>
+
+  //alert(enteredName);
+
+    //<p className="text-lg">{showme('ok so far')}</p>
+const hey = (msg: string) => {
+  setUser(msg);
+  alert('you entered' + msg);
+};
 
  function MyForm() {
     function Display() {
