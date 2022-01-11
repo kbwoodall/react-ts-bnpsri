@@ -13,8 +13,8 @@ import ReactDOM from 'react-dom';
 import {LangContext, lang} from './MyContext'
 
 const App = () => {
-  const [info, setInfo] = useState('K Woodall');
-  const UserContext = createContext(info);
+  //const [info, setInfo] = useState('K Woodall');
+  //const UserContext = createContext(info);
 
   function Display() {
     const value = useContext(LangContext);
@@ -22,7 +22,7 @@ const App = () => {
   }
 
   return (
-    <UserContext.Provider value={info}>
+    <LangContext.Provider value={lang.en.stuff}>
       <div className="flex bg-green-400 h-screen ">
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
           {myhooks()}
@@ -38,7 +38,7 @@ const App = () => {
           {mydemo()}
         </div>
       </div>
-    </UserContext.Provider>
+    </LangContext.Provider>
   );
 };
 
