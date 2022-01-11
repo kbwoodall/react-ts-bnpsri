@@ -11,7 +11,6 @@ import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
 const App = () => {
-  const [title, setTitle] = useState('new stuff');
   const [user, setUser] = useState('K Woodall');
   const UserContext = createContext(user);
 
@@ -40,6 +39,7 @@ const App = () => {
 render(<App />, document.getElementById('root'));
 
 /*
+//const [title, setTitle] = useState('new stuff');
   //const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
   //  const enteredName = event.target.value;
   //  setUser(enteredName);
