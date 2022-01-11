@@ -4,11 +4,22 @@ import moment from 'moment';
 import { FC, ReactElement } from 'react';
 import { createContext, useContext } from 'react';
 
-function MyForm() {
-  function Display() {
-    const rval = useContext(UserContext);
-    return <div>The answer is {rval}</div>;
-  }
+export function MyFormStuff() {
+  const hey = (msg: string) => {
+    setUser(msg);
+    alert('ok so far ' + msg);
+  };
+
+  const [user, setUser] = useState('K Woodall');
+  const UserContext = createContext(user);
+
+  const Display = (msg: string) => {
+    return (
+      <div>
+        <p>{msg}</p>
+      </div>
+    );
+  };
 
   const [name, setName] = useState('');
 
@@ -19,8 +30,6 @@ function MyForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Display />
-
       <label>
         Enter your name:
         <input

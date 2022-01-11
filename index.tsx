@@ -5,6 +5,7 @@ import { mydemo, myhooks, formatDate, showText } from './MyUseEffect';
 import './style.css';
 import { useState, useReducer, useEffect } from 'react';
 import { FC, ReactElement } from 'react';
+import { MyFormStuff } from './MyForm';
 
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
@@ -32,7 +33,7 @@ const App = () => {
     setUser(enteredName);
     //alert(enteredName);
   };
-
+  /*
   function MyForm() {
     function Display() {
       const rval = useContext(UserContext);
@@ -65,7 +66,7 @@ const App = () => {
       </form>
     );
   }
-
+ */
   return (
     <UserContext.Provider value={user}>
       <div className="flex bg-green-400 h-screen ">
@@ -78,7 +79,7 @@ const App = () => {
 
         <div className="text-black font-bold rounded mt-10 ml-10">
           <div>
-            <MyForm />
+            <MyFormStuff />
           </div>
         </div>
         <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-5/6 mr-10">
