@@ -11,6 +11,7 @@ export function MyFormStuff() {
   };
 
   const [user, setUser] = useState('K Woodall');
+  const [name, setName] = useState('');
   const UserContext = createContext(user);
 
   const Display = (msg: string) => {
@@ -21,27 +22,30 @@ export function MyFormStuff() {
     );
   };
 
-  const [name, setName] = useState('');
+  return (
+    <label>
+      Enter your name:
+      <input
+        className="mb-2"
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <button className="mb-5 ml-2" type="button" onClick={() => hey(name)}>
+        Show result
+      </button>
+    </label>
+  );
+}
 
+/*
+
+//<form onSubmit={handleSubmit}>
+ //  </form>
   const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     alert('The name you entered was:  ' + name);
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Enter your name:
-        <input
-          className="mb-2"
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <button className="mb-5 ml-2" type="button" onClick={() => hey(name)}>
-          Show result
-        </button>
-      </label>
-    </form>
-  );
-}
+
+*/
