@@ -7,7 +7,7 @@ import { createContext, useContext } from 'react';
 export function MyFormStuff() {
   const hey = (msg: string) => {
     setUser(msg);
-    alert('you entered again ' + msg);
+    alert('you entered ' + msg);
   };
 
   const [user, setUser] = useState('K Woodall');
