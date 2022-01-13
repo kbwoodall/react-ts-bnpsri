@@ -10,7 +10,13 @@ import { MyFormStuff } from './MyForm';
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
-import {LangContext, data, DataContext, location} from './MyContext'
+import {
+  LangContext,
+  data,
+  DataContext,
+  location,
+  blockchain,
+} from './MyContext';
 
 const App = () => {
   //const [info, setInfo] = useState('K Woodall');
