@@ -15,12 +15,14 @@ import {
   data,
   DataContext,
   location,
-  blockchain,
+  getBlock,
 } from './MyContext';
 
 const App = () => {
   //const [info, setInfo] = useState('K Woodall');
   //const UserContext = createContext(info);
+
+  getBlock();
 
   function Display() {
     const value = useContext(LangContext);
