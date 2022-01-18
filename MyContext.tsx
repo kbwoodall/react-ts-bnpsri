@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { render } from 'react-dom';
 export const lang = { en: { stuff: 'Yorba Linda' } };
 export const data = { city: 'Yorba Linda' };
 export const location = { city: 'Anaheim' };
@@ -14,4 +14,14 @@ export const getBlock = () => {
   for (var i = 0; i < blockdata.length; i++) {
     console.log('testing ' + blockdata[i].name);
   }
+
+  return (
+    <div>
+      {blockdata.map((person, id) => (
+        <p key={id}>
+          Hello, {person.id} from {person.name}!
+        </p>
+      ))}
+    </div>
+  );
 };

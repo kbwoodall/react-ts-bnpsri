@@ -22,8 +22,6 @@ const App = () => {
   //const [info, setInfo] = useState('K Woodall');
   //const UserContext = createContext(info);
 
-  getBlock();
-
   function Display() {
     const value = useContext(LangContext);
     return <div>The info is {value}</div>;
@@ -38,6 +36,7 @@ const App = () => {
 
         <div className="text-black font-bold rounded mt-10 ml-10">
           <div>
+            {getBlock()}
             <Display />
             <MyFormStuff />
           </div>
