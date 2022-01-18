@@ -8,7 +8,7 @@ export const DataContext = React.createContext(location);
 
 export const getBlock = () => {
   const blockdata = [
-    { id: 123, name: 'arnie', date: '2021-01-20' },
+    { id: 123, name: 'John', date: '2021-01-20' },
     { id: 345, name: 'jack', date: '2021-01-20' },
   ];
   for (var i = 0; i < blockdata.length; i++) {
@@ -18,8 +18,8 @@ export const getBlock = () => {
   return (
     <div>
       {blockdata.map((person, id) => (
-        <p key={id}>
-          Hello, {person.id} from {person.name}!
+        <p key={id} className="text-lg font-bold m-5">
+          Id {person.id} , {person.name}, {person.date}
         </p>
       ))}
     </div>

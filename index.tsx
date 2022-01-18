@@ -31,12 +31,13 @@ const App = () => {
     <LangContext.Provider value={data.city}>
       <div className="flex bg-green-400 h-screen ">
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
-          {myhooks()}
+          {formatDate()}
+          {getBlock()}
+         
         </div>
 
         <div className="text-black font-bold rounded mt-10 ml-10">
           <div>
-            {getBlock()}
             <Display />
             <MyFormStuff />
           </div>
