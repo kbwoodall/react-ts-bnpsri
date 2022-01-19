@@ -33,15 +33,9 @@ const App = () => {
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
           {formatDate()}
           {getBlock()}
-         
         </div>
 
-        <div className="text-black font-bold rounded mt-10 ml-10">
-          <div>
-            <Display />
-            <MyFormStuff />
-          </div>
-        </div>
+
         <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-5/6 mr-10">
           {mydemo()}
         </div>
@@ -53,6 +47,16 @@ const App = () => {
 render(<App />, document.getElementById('root'));
 
 /*
+<div className="text-black font-bold rounded mt-10 ml-10">
+          <div>
+            <Display />
+            <MyFormStuff />
+          </div>
+        </div>
+        <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-5/6 mr-10">
+          {mydemo()}
+        </div>
+
 
 <p className="text-lg mt-10">Hey {user}</p>
 //const [title, setTitle] = useState('new stuff');

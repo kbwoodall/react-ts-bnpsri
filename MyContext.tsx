@@ -16,7 +16,7 @@ export const getBlock = () => {
 
   const blockdata = [
     { id: 123, name: 'John', date: date, amt: 100.01 },
-    { id: 345, name: 'jack', date: '2022-01-12', amt: 150.23 },
+    { id: 345, name: 'jack', date: date, amt: 150.23 },
   ];
   for (var i = 0; i < blockdata.length; i++) {
     console.log('testing ' + blockdata[i].name);
