@@ -28,6 +28,10 @@ export const getBlock = () => {
   for (var i = 0; i < blockdata.length; i++) {
     console.log('testing ' + blockdata[i].name);
   }
+  const hdg = () => {
+    return;
+    <p className="text-lg font-bold m-5">Block input </p>;
+  };
 
   return (
     <div>
