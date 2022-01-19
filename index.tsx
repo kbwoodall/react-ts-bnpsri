@@ -31,10 +31,8 @@ const App = () => {
     <LangContext.Provider value={data.city}>
       <div className="flex bg-green-400 h-screen ">
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
-          {formatDate()}
           {getBlock()}
         </div>
-
 
         <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-5/6 mr-10">
           {mydemo()}
