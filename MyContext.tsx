@@ -29,12 +29,14 @@ export const getBlock = () => {
     console.log('testing ' + blockdata[i].name);
   }
   const hdg = () => {
-    return;
-    <p className="text-lg font-bold m-5">Block input </p>;
+    return(
+    <p className="text-lg font-bold m-5">Block input </p>
+    )
   };
 
   return (
     <div>
+      {hdg()}
       {blockdata.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
           Id {person.id} , {person.name}, {person.date}, {person.amt}
