@@ -29,9 +29,7 @@ export const getBlock = () => {
     console.log('testing ' + blockdata[i].name);
   }
   const hdg = () => {
-    return(
-    <p className="text-lg font-bold m-5">Block input </p>
-    )
+    return <p className="text-lg font-bold m-5">Block input </p>;
   };
 
   return (
