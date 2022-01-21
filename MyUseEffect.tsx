@@ -30,7 +30,9 @@ export function mydemo(): JSX.Element | null {
 
   function Display() {
     const value = useContext(LangContext);
-    return <div className="text-lg font-bold m-5">The info is {value}</div>;
+    return <div className="text-lg font-bold m-5">Show Block chain
+    
+    </div>;
   }
 
   return (
