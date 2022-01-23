@@ -23,22 +23,23 @@ const App = () => {
   //const UserContext = createContext(info);
 
   function Display() {
-    const value = useContext(LangContext);
-    return <div>The info is {value}</div>;
+    const value = useContext(DataContext);
+    return <div>The info is {value[0].name}</div>;
   }
 
   return (
-    <LangContext.Provider value={data.city}>
+    <DataContext.Provider value={data.city}>
       <div className="flex bg-green-400 h-screen ">
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
           {getBlock()}
         </div>
 
         <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-5/6 mr-10">
+          {Display()}
           {mydemo()}
         </div>
       </div>
-    </LangContext.Provider>
+    </DataContext.Provider>
   );
 };
 
