@@ -23,6 +23,10 @@ export const getBlock = () => {
   const timestamp = new Date().getTime();
   var date = new Date(timestamp).toDateString();
 
+
+  let newdate = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(timestamp);
+  console.log("NEWDATE " + newdate)
+
   // generate a timestamp
   var ts2 = Number(getDate); //1479895361931
 
