@@ -5,7 +5,12 @@ export const lang = { en: { stuff: 'Yorba Linda' } };
 export const data = { city: 'Yorba Linda' };
 export const location = { city: 'Anaheim' };
 export const LangContext = React.createContext(data);
-export const DataContext = React.createContext(location);
+const timestamp = new Date().getTime();
+export const blockstuff = [
+  { id: 123, name: 'Jay', date: timestamp, amt: 100.01 },
+  { id: 345, name: 'Bing', date: timestamp, amt: 150.23 },
+];
+export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
   function getDate() {
