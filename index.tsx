@@ -24,7 +24,7 @@ const App = () => {
 
   function Display() {
     const value = useContext(DataContext);
-    return <div>The info is {value[0].name}</div>;
+    return <div>The info is {value[0].date}</div>;
   }
 
   return (
