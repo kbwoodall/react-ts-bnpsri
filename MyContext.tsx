@@ -7,7 +7,7 @@ export const location = { city: 'Anaheim' };
 export const LangContext = React.createContext(data);
 
 // ------------------------------------------------------------
-const timestamp = new Date().getTime();
+
 const str = '2021-06-11';
 const dateTest = new Date(str).getTime();
 let newdate1 = new Intl.DateTimeFormat('en-US', {
@@ -18,8 +18,8 @@ let newdate1 = new Intl.DateTimeFormat('en-US', {
   minute: '2-digit',
   second: '2-digit',
 }).format(dateTest);
-
-let newdate2= new Intl.DateTimeFormat('en-US', {
+const timestamp = new Date().getTime();
+let newdate2 = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
   month: '2-digit',
   day: '2-digit',
@@ -38,6 +38,23 @@ export const blockstuff = [
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
+  const hdg = () => {
+    return <p className="text-lg font-bold m-5">Block input </p>;
+  };
+
+  return (
+    <div>
+      {hdg()}
+      {blockstuff.map((person, id) => (
+        <p key={id} className="text-lg font-bold m-5">
+          Id {person.id} , {person.name}, {person.date}, {person.amt}
+        </p>
+      ))}
+    </div>
+  );
+};
+
+/*
   function getDate() {
     const dt = moment().format('MMMM Do YYYY, h:mm:ss a');
     console.log('in formatDate ' + dt);
@@ -47,7 +64,7 @@ export const getBlock = () => {
   const currentDate = Date.now();
   const timestamp = new Date().getTime();
   var date = new Date(timestamp).toDateString();
-
+  
   let newdate = new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
     month: '2-digit',
@@ -78,18 +95,5 @@ export const getBlock = () => {
   for (var i = 0; i < blockdata.length; i++) {
     console.log('testing ' + blockdata[i].name);
   }
-  const hdg = () => {
-    return <p className="text-lg font-bold m-5">Block input </p>;
-  };
 
-  return (
-    <div>
-      {hdg()}
-      {blockstuff.map((person, id) => (
-        <p key={id} className="text-lg font-bold m-5">
-          Id {person.id} , {person.name}, {person.date}, {person.amt}
-        </p>
-      ))}
-    </div>
-  );
-};
+  */
