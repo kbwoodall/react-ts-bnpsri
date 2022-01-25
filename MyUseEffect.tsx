@@ -20,6 +20,35 @@ export function showText(imsg: ShowTextProps) {
   console.log('in ShowText ' + imsg.msg);
   return <p className="text-lg font-bold m-5"> {imsg.msg}</p>;
 }
+
+function Display() {
+  const value = useContext(DataContext);
+  return <div>The info is {value[0].name}</div>;
+}
+
+export function myhooks(): JSX.Element | null {
+  const [count, setCount] = useState(0);
+  let myObj = { msg: 'Format to chain' };
+
+  return (
+    <div>
+    
+      {showText(myObj)}
+      <p className="text-lg font-bold m-15"> testing </p>
+
+      <p className="text-lg font-bold m-5">You clicked {count} times first</p>
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={() => setCount(count + 1)}
+      >
+        Click me
+      </button>
+    </div>
+  );
+}
+
+/*
+
 export function mydemo(): JSX.Element | null {
   console.log('this is an exportable function in TypeScript. !!');
   const [count, setCount] = useState(0);
@@ -42,33 +71,6 @@ export function mydemo(): JSX.Element | null {
     </div>
   );
 }
-function Display() {
-  const value = useContext(DataContext);
-  return <div>The info is {value[0].name}</div>;
-}
-
-export function myhooks(): JSX.Element | null {
-  const [count, setCount] = useState(0);
-  let myObj = { msg: 'Current Message from hooks' };
-
-  return (
-    <div>
-      {Display()}
-      {showText(myObj)}
-      <p className="text-lg font-bold m-15"> testing </p>
-
-      <p className="text-lg font-bold m-5">You clicked {count} times first</p>
-      <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={() => setCount(count + 1)}
-      >
-        Click me
-      </button>
-    </div>
-  );
-}
-
-/*
 function Display() {
     const value = useContext(LangContext);
     return <div className="text-lg font-bold m-5">Show Block chain</div>;
