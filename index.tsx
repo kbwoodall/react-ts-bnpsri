@@ -13,11 +13,6 @@ import ReactDOM from 'react-dom';
 import { DataContext, getBlock, blockstuff } from './MyContext';
 
 const App = () => {
-  function Display() {
-    const value = useContext(DataContext);
-    return <div>The info is {blockstuff[0].name}</div>;
-  }
-
   return (
     <DataContext.Provider value={blockstuff}>
       <div className="flex bg-green-400 h-screen ">
@@ -26,8 +21,7 @@ const App = () => {
         </div>
 
         <div className="bg-blue-200 rounded-xl mt-10 mb-10 w-5/6 mr-10">
-          {Display()}
-          {mydemo()}
+          {myhooks()}
         </div>
       </div>
     </DataContext.Provider>
@@ -37,6 +31,10 @@ const App = () => {
 render(<App />, document.getElementById('root'));
 
 /*
+ function Display() {
+    const value = useContext(DataContext);
+    return <div>The info is {blockstuff[0].name}</div>;
+  }
  //const [info, setInfo] = useState('K Woodall');
   //const UserContext = createContext(info);
 

@@ -28,16 +28,10 @@ export function mydemo(): JSX.Element | null {
     console.log('You clicked ' + count + ' times wow');
   }, []);
 
-  function Display() {
-    const value = useContext(LangContext);
-    return <div className="text-lg font-bold m-5">Show Block chain
-    
-    </div>;
-  }
-
+  
   return (
     <div>
-      <Display/>
+      <Display />
       <p className="text-lg font-bold m-5">You clicked {count} times again</p>
       <button
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4  ml-10"
@@ -48,6 +42,10 @@ export function mydemo(): JSX.Element | null {
     </div>
   );
 }
+function Display() {
+  const value = useContext(DataContext);
+  return <div>The info is {value[0].name}</div>;
+}
 
 export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
@@ -55,8 +53,8 @@ export function myhooks(): JSX.Element | null {
 
   return (
     <div>
+      {Display()}
       {showText(myObj)}
-      {formatDate()}
       <p className="text-lg font-bold m-15"> testing </p>
 
       <p className="text-lg font-bold m-5">You clicked {count} times first</p>
@@ -71,6 +69,11 @@ export function myhooks(): JSX.Element | null {
 }
 
 /*
+function Display() {
+    const value = useContext(LangContext);
+    return <div className="text-lg font-bold m-5">Show Block chain</div>;
+  }
+
   function myhooks(): JSX.Element | null {
 
     const [count, setCount] = useState(0);
