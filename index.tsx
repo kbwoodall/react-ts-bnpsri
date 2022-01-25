@@ -10,21 +10,11 @@ import { MyFormStuff } from './MyForm';
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
-import {
-  LangContext,
-  data,
-  DataContext,
-  location,
-  getBlock,
-  blockstuff,
-} from './MyContext';
+import { DataContext, getBlock, blockstuff } from './MyContext';
 
 const App = () => {
-  //const [info, setInfo] = useState('K Woodall');
-  //const UserContext = createContext(info);
-
   function Display() {
-    const value = useContext(DataContext)
+    const value = useContext(DataContext);
     return <div>The info is {blockstuff[0].name}</div>;
   }
 
@@ -47,6 +37,9 @@ const App = () => {
 render(<App />, document.getElementById('root'));
 
 /*
+ //const [info, setInfo] = useState('K Woodall');
+  //const UserContext = createContext(info);
+
 <div className="text-black font-bold rounded mt-10 ml-10">
           <div>
             <Display />

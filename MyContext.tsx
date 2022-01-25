@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import moment from 'moment';
-export const lang = { en: { stuff: 'Yorba Linda' } };
-export const data = { city: 'Yorba Linda' };
-export const location = { city: 'Anaheim' };
-export const LangContext = React.createContext(data);
 
+export const data = { city: 'Yorba Linda' };
+export const LangContext = React.createContext(data);
 // ------------------------------------------------------------
 
 const str = '2021-06-11';
@@ -55,6 +53,12 @@ export const getBlock = () => {
 };
 
 /*
+
+export const lang = { en: { stuff: 'Yorba Linda' } };
+export const data = { city: 'Yorba Linda' };
+export const location = { city: 'Anaheim' };
+export const LangContext = React.createContext(data);
+
   function getDate() {
     const dt = moment().format('MMMM Do YYYY, h:mm:ss a');
     console.log('in formatDate ' + dt);
