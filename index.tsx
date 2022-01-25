@@ -16,6 +16,7 @@ import {
   DataContext,
   location,
   getBlock,
+  blockstuff,
 } from './MyContext';
 
 const App = () => {
@@ -23,12 +24,12 @@ const App = () => {
   //const UserContext = createContext(info);
 
   function Display() {
-    const value = useContext(DataContext);
-    return <div>The info is {value[0].date}</div>;
+    const value = useContext(DataContext)
+    return <div>The info is {blockstuff[0].name}</div>;
   }
 
   return (
-    <DataContext.Provider value={data.city}>
+    <DataContext.Provider value={blockstuff}>
       <div className="flex bg-green-400 h-screen ">
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
           {getBlock()}

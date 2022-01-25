@@ -6,9 +6,11 @@ export const data = { city: 'Yorba Linda' };
 export const location = { city: 'Anaheim' };
 export const LangContext = React.createContext(data);
 const timestamp = new Date().getTime();
+const str = '2020-06-11';
+const dateTest = new Date(str);
 export const blockstuff = [
   { id: 123, name: 'Jay', date: timestamp, amt: 100.01 },
-  { id: 345, name: 'Bing', date: timestamp, amt: 150.23 },
+  { id: 345, name: 'Bing', date: dateTest, amt: 150.23 },
 ];
 export const DataContext = React.createContext(blockstuff);
 
@@ -23,16 +25,32 @@ export const getBlock = () => {
   const timestamp = new Date().getTime();
   var date = new Date(timestamp).toDateString();
 
-
-  let newdate = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(timestamp);
-  console.log("NEWDATE " + newdate)
+  let newdate = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }).format(timestamp);
+  console.log('NEWDATE ' + newdate);
+  const str = '2020-06-11';
+  const dateTest = new Date(str);
 
   // generate a timestamp
-  var ts2 = Number(getDate); //1479895361931
+  var ts2 = Number(dateTest); //
+  let newdate2 = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }).format(ts2);
 
   const blockdata = [
     { id: 123, name: 'John', date: getDate(), amt: 100.01 },
-    { id: 345, name: 'jack', date: getDate(), amt: 150.23 },
+    { id: 345, name: 'jack', date: newdate, amt: 150.23 },
   ];
   for (var i = 0; i < blockdata.length; i++) {
     console.log('testing ' + blockdata[i].name);
