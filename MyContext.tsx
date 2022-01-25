@@ -5,13 +5,36 @@ export const lang = { en: { stuff: 'Yorba Linda' } };
 export const data = { city: 'Yorba Linda' };
 export const location = { city: 'Anaheim' };
 export const LangContext = React.createContext(data);
+
+// ------------------------------------------------------------
 const timestamp = new Date().getTime();
-const str = '2020-06-11';
-const dateTest = new Date(str);
+const str = '2021-06-11';
+const dateTest = new Date(str).getTime();
+let newdate1 = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+}).format(dateTest);
+
+let newdate2= new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+}).format(timestamp);
+
+// ------------------------------------------------------------
+
 export const blockstuff = [
-  { id: 123, name: 'Jay', date: timestamp, amt: 100.01 },
-  { id: 345, name: 'Bing', date: dateTest, amt: 150.23 },
+  { id: 123, name: 'Jay', date: newdate1, amt: 100.01 },
+  { id: 345, name: 'Bing', date: newdate2, amt: 150.23 },
 ];
+
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
@@ -62,7 +85,7 @@ export const getBlock = () => {
   return (
     <div>
       {hdg()}
-      {blockdata.map((person, id) => (
+      {blockstuff.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
           Id {person.id} , {person.name}, {person.date}, {person.amt}
         </p>
