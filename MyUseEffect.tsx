@@ -32,23 +32,22 @@ export function myhooks(): JSX.Element | null {
 
   return (
     <div>
-    
       {showText(myObj)}
-      <p className="text-lg font-bold m-15"> testing </p>
+     
 
       <p className="text-lg font-bold m-5">You clicked {count} times first</p>
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         onClick={() => setCount(count + 1)}
       >
-        Click me
+        Format now
       </button>
     </div>
   );
 }
 
 /*
-
+ <p className="text-lg font-bold m-15"> testing </p>
 export function mydemo(): JSX.Element | null {
   console.log('this is an exportable function in TypeScript. !!');
   const [count, setCount] = useState(0);
