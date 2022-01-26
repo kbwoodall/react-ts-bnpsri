@@ -24,8 +24,19 @@ export function showText(imsg: ShowTextProps) {
 function Display() {
   const value = useContext(DataContext);
   return <div>The info is {value[0].name}</div>;
-}
 
+
+/*
+{value}.map((person, id) => (
+  <p key={id} className="text-lg font-bold m-5">
+    Id {person.id} , {person.name}, {person.date}, {person.amt}
+  </p>
+))}
+*/
+
+
+}
+// -----------------------------------------------------------------------
 export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
   let myObj = { msg: 'Format to chain' };
@@ -33,7 +44,6 @@ export function myhooks(): JSX.Element | null {
   return (
     <div>
       {showText(myObj)}
-     
 
       <p className="text-lg font-bold m-5">You clicked {count} times first</p>
       <button
@@ -45,7 +55,7 @@ export function myhooks(): JSX.Element | null {
     </div>
   );
 }
-
+// -----------------------------------------------------------------------
 /*
  <p className="text-lg font-bold m-15"> testing </p>
 export function mydemo(): JSX.Element | null {
