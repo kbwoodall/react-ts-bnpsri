@@ -23,18 +23,22 @@ export function showText(imsg: ShowTextProps) {
 
 function Display() {
   const value = useContext(DataContext);
-  return <div>The info is {value[0].name}</div>;
 
+  var loopData: string = '';
+  var i: number = 0;
+  for (i = 0; i < 2; i++) {
+    console.log( i );
+  }
 
-/*
+  return <div>The info is {value[0].date}</div>;
+
+  /*
 {value}.map((person, id) => (
   <p key={id} className="text-lg font-bold m-5">
     Id {person.id} , {person.name}, {person.date}, {person.amt}
   </p>
 ))}
 */
-
-
 }
 // -----------------------------------------------------------------------
 export function myhooks(): JSX.Element | null {
@@ -44,6 +48,7 @@ export function myhooks(): JSX.Element | null {
   return (
     <div>
       {showText(myObj)}
+      {Display()}
 
       <p className="text-lg font-bold m-5">You clicked {count} times first</p>
       <button
