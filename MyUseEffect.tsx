@@ -28,10 +28,13 @@ function Display() {
   var i: number = 0;
   for (i = 0; i < 2; i++) {
     console.log( {value});
-    loopData = value[i];
+    loopData = value[i].date;
     console.log( loopData);
-    //console.log( loopData);
-    //console.log( loopData.date);
+    let date1 =value[0].date;
+    const date11 = new Date(date1);
+    let date2 =value[1].date;
+    
+    console.log( date11);
     //console.log( loopData.amt);
   }
 
