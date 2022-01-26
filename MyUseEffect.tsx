@@ -27,7 +27,9 @@ function Display() {
   var loopData: string = '';
   var i: number = 0;
   for (i = 0; i < 2; i++) {
-    console.log( i );
+    console.log( {value});
+    loopData = value[0];
+    console.log( loopData);
   }
 
   return <div>The info is {value[0].date}</div>;
