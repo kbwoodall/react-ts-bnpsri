@@ -28,9 +28,9 @@ function Display() {
   var i: number = 0;
   for (i = 0; i < 2; i++) {
     console.log( {value});
-    loopData = value[1];
+    loopData = value[i];
     console.log( loopData);
-    console.log( loopData);
+    //console.log( loopData);
     //console.log( loopData.date);
     //console.log( loopData.amt);
   }
