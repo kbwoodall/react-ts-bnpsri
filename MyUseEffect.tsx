@@ -28,8 +28,11 @@ function Display() {
   var i: number = 0;
   for (i = 0; i < 2; i++) {
     console.log( {value});
-    loopData = value[0];
+    loopData = value[1];
     console.log( loopData);
+    console.log( loopData);
+    //console.log( loopData.date);
+    //console.log( loopData.amt);
   }
 
   return <div>The info is {value[0].date}</div>;
