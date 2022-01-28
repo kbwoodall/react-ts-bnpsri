@@ -17,7 +17,7 @@ interface ShowTextProps {
   msg: string;
 }
 export function showText(imsg: ShowTextProps) {
-  console.log('in ShowText ' + imsg.msg);
+  //console.log('in ShowText ' + imsg.msg);
   return <p className="text-lg font-bold m-5"> {imsg.msg}</p>;
 }
 
