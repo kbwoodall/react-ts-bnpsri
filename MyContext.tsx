@@ -36,6 +36,8 @@ export const blockstuff = [
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
+  console.log("date in unix " +  dateTest + ' ' + timestamp);
+
   const hdg = () => {
     return <p className="text-lg font-bold m-5">Block input </p>;
   };
