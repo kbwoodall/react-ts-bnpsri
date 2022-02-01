@@ -7,7 +7,7 @@ export const LangContext = React.createContext(data);
 // ------------------------------------------------------------
 
 const str = '2021-06-11';
-const dateTest = new Date(str).getTime();
+const timestamp = new Date(str).getTime();
 let newdate1 = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
   month: '2-digit',
@@ -15,8 +15,8 @@ let newdate1 = new Intl.DateTimeFormat('en-US', {
   hour: '2-digit',
   minute: '2-digit',
   second: '2-digit',
-}).format(dateTest);
-const timestamp = new Date().getTime();
+}).format(timestamp);
+const timestamp2 = new Date().getTime();
 let newdate2 = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
   month: '2-digit',
@@ -24,19 +24,19 @@ let newdate2 = new Intl.DateTimeFormat('en-US', {
   hour: '2-digit',
   minute: '2-digit',
   second: '2-digit',
-}).format(timestamp);
+}).format(timestamp2);
 
 // ------------------------------------------------------------
 
 export const blockstuff = [
-  { id: 123, name: 'Jay', date: newdate1, amt: 100.01 },
-  { id: 345, name: 'Bing', date: newdate2, amt: 150.23 },
+  { id: 123, name: 'Jay', date: newdate1, ts: timestamp, amt: 100.01 },
+  { id: 345, name: 'Bing', date: newdate2, ts: timestamp2, amt: 150.23 },
 ];
 
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
-  console.log("date in unix " +  dateTest + ' ' + timestamp);
+  console.log("date in unix " +  timestamp + ' ' + timestamp2);
 
   const hdg = () => {
     return <p className="text-lg font-bold m-5">Block input </p>;
