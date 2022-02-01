@@ -29,7 +29,7 @@ let newdate2 = new Intl.DateTimeFormat('en-US', {
 // ------------------------------------------------------------
 
 const getRandom = () => {
-  return Math.floor(Math.random() * 1);
+  return Math.floor(Math.random() * 10000);
 };
 
 export const blockstuff = [
