@@ -28,6 +28,10 @@ let newdate2 = new Intl.DateTimeFormat('en-US', {
 
 // ------------------------------------------------------------
 
+const getRandom = () => {
+  return Math.floor(Math.random() * 1);
+};
+
 export const blockstuff = [
   { id: 123, name: 'Jay', date: newdate1, ts: timestamp, amt: 100.01 },
   { id: 345, name: 'Bing', date: newdate2, ts: timestamp2, amt: 150.23 },
@@ -36,7 +40,7 @@ export const blockstuff = [
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
-  console.log("date in unix " +  timestamp + ' ' + timestamp2);
+  console.log('date in unix ' + timestamp + ' ' + timestamp2 + ' ' + getRandom() );
 
   const hdg = () => {
     return <p className="text-lg font-bold m-5">Block input </p>;
