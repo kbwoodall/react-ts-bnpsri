@@ -33,7 +33,7 @@ const getRandom = () => {
 };
 
 export const blockstuff = [
-  { id: 123, name: 'Jay', date: newdate1, ts: timestamp, amt: 100.01, getRandom },
+  { id: 123, name: 'Bob', date: newdate1, ts: timestamp, amt: 100.01, getRandom },
   { id: 345, name: 'Bing', date: newdate2, ts: timestamp2, amt: 150.23, getRandom },
 ];
 
