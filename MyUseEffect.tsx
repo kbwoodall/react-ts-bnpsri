@@ -78,9 +78,7 @@ function Display() {
     let date1 = value[0].date;
     const date11 = new Date(date1);
     let date2 = value[1].date;
-
     console.log(date11);
-    
   }
 
   return <div>The info is {value[0].date}</div>;
@@ -104,7 +102,7 @@ export function myhooks(): JSX.Element | null {
       <div>
         {blockstuff.map((person, id) => (
           <p key={id} className="text-lg font-bold m-5">
-            Id {person.id} , {person.name}, {person.date}, {person.amt}
+            Id {person.id} , {person.name}, {person.rnd}, {person.amt}
           </p>
         ))}
       </div>
