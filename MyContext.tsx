@@ -39,7 +39,8 @@ export const blockstuff = [
     date: newdate1,
     ts: timestamp,
     amt: 100.01,
-    rnd: getRandom(),
+    fchn: getRandom(),
+    tchn: getRandom()
   },
   {
     id: 345,
@@ -47,7 +48,8 @@ export const blockstuff = [
     date: newdate2,
     ts: timestamp2,
     amt: 150.23,
-    rnd: getRandom(),
+    fchn: getRandom(),
+    tchn: getRandom()
   },
 ];
 
@@ -65,7 +67,7 @@ export const getBlock = () => {
       {hdg()}
       {blockstuff.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
-          Id {person.id} , {person.name}, {person.date}, {person.amt}
+          Id {person.id} , {person.name}, {person.date}, {person.amt}, {person.fchn}, {person.tchn}
         </p>
       ))}
     </div>
