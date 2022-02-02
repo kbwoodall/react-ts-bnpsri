@@ -6,9 +6,6 @@ export const data = { city: 'Yorba Linda' };
 export const LangContext = React.createContext(data);
 // ------------------------------------------------------------
 
-const [fchn, setFchn] = useState('');
-const [tchn, setTchn] = useState('');
-
 const str = '2021-06-11';
 const timestamp = new Date(str).getTime();
 let newdate1 = new Intl.DateTimeFormat('en-US', {
@@ -63,6 +60,8 @@ export const blockstuff = [
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
+  const [fchn, setFchn] = useState(getFchn);
+  const [tchn, setTchn] = useState(getTChn);
   console.log('date in unix ' + timestamp + ' ' + timestamp2);
 
   const hdg = () => {
