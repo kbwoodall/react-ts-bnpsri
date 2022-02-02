@@ -84,6 +84,24 @@ function Display() {
   return <div>The info is {value[0].date}</div>;
 
   /*
+
+import React from 'react';
+import { useState, useReducer, useEffect } from 'react';
+import moment from 'moment';
+import { FC, ReactElement } from 'react';
+import { createContext, useContext } from 'react';
+
+export function MyFormStuff() {
+  const hey = (msg: string) => {
+    setUser(msg);
+    alert('you entered ' + msg);
+  };
+
+  const [user, setUser] = useState('K Woodall');
+  const [name, setName] = useState('');
+  const UserContext = createContext(us
+
+
 {value}.map((person, id) => (
   <p key={id} className="text-lg font-bold m-5">
     Id {person.id} , {person.name}, {person.date}, {person.amt}

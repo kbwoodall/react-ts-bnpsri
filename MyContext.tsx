@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import moment from 'moment';
-
+import { useState, useReducer, useEffect } from 'react';
 export const data = { city: 'Yorba Linda' };
 export const LangContext = React.createContext(data);
 // ------------------------------------------------------------
+
+const [fchn, setFchn] = useState('');
+const [tchn, setTchn] = useState('');
 
 const str = '2021-06-11';
 const timestamp = new Date(str).getTime();
@@ -36,8 +39,6 @@ const getTChn = () => {
   return Math.floor(Math.random() * 100000000);
 };
 
-
-
 export const blockstuff = [
   {
     id: 123,
@@ -46,7 +47,7 @@ export const blockstuff = [
     ts: timestamp,
     amt: 100.01,
     fchn: getFchn(),
-    tchn: getFchn()
+    tchn: getFchn(),
   },
   {
     id: 345,
@@ -55,14 +56,14 @@ export const blockstuff = [
     ts: timestamp2,
     amt: 150.23,
     fchn: getFchn(),
-    tchn: getTChn()
+    tchn: getTChn(),
   },
 ];
 
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
-  console.log('date in unix ' + timestamp + ' ' + timestamp2 );
+  console.log('date in unix ' + timestamp + ' ' + timestamp2);
 
   const hdg = () => {
     return <p className="text-lg font-bold m-5">Block input </p>;
@@ -73,7 +74,8 @@ export const getBlock = () => {
       {hdg()}
       {blockstuff.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
-          Id {person.id} , {person.name}, {person.date}, {person.amt}, {person.fchn}, {person.tchn}
+          Id {person.id} , {person.name}, {person.date}, {person.amt},{' '}
+          {person.fchn}, {person.tchn}
         </p>
       ))}
     </div>
@@ -81,7 +83,21 @@ export const getBlock = () => {
 };
 
 /*
+import React from 'react';
+import { useState, useReducer, useEffect } from 'react';
+import moment from 'moment';
+import { FC, ReactElement } from 'react';
+import { createContext, useContext } from 'react';
 
+export function MyFormStuff() {
+  const hey = (msg: string) => {
+    setUser(msg);
+    alert('you entered ' + msg);
+  };
+
+  const [user, setUser] = useState('K Woodall');
+  const [name, setName] = useState('');
+  const UserContext = createContext(us
 export const lang = { en: { stuff: 'Yorba Linda' } };
 export const data = { city: 'Yorba Linda' };
 export const location = { city: 'Anaheim' };
