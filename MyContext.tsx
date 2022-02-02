@@ -28,9 +28,15 @@ let newdate2 = new Intl.DateTimeFormat('en-US', {
 
 // ------------------------------------------------------------
 
-const getRandom = () => {
+const getFchn = () => {
   return Math.floor(Math.random() * 100000000);
 };
+
+const getTChn = () => {
+  return Math.floor(Math.random() * 100000000);
+};
+
+
 
 export const blockstuff = [
   {
@@ -39,8 +45,8 @@ export const blockstuff = [
     date: newdate1,
     ts: timestamp,
     amt: 100.01,
-    fchn: getRandom(),
-    tchn: getRandom()
+    fchn: getFchn(),
+    tchn: getFchn()
   },
   {
     id: 345,
@@ -48,8 +54,8 @@ export const blockstuff = [
     date: newdate2,
     ts: timestamp2,
     amt: 150.23,
-    fchn: getRandom(),
-    tchn: getRandom()
+    fchn: getFchn(),
+    tchn: getTChn()
   },
 ];
 
