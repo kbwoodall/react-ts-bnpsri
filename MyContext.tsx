@@ -33,16 +33,28 @@ const getRandom = () => {
 };
 
 export const blockstuff = [
-  { id: 123, name: 'Bob', date: newdate1, ts: timestamp, amt: 100.01, getRandom },
-  { id: 345, name: 'Bing', date: newdate2, ts: timestamp2, amt: 150.23, getRandom },
+  {
+    id: 123,
+    name: 'Bob',
+    date: newdate1,
+    ts: timestamp,
+    amt: 100.01,
+    rnd: getRandom(),
+  },
+  {
+    id: 345,
+    name: 'Bing',
+    date: newdate2,
+    ts: timestamp2,
+    amt: 150.23,
+    rnd: getRandom(),
+  },
 ];
 
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
-  console.log(
-    'date in unix ' + timestamp + ' ' + timestamp2 + ' ' + getRandom()
-  );
+  console.log('date in unix ' + timestamp + ' ' + timestamp2 + ' ');
 
   const hdg = () => {
     return <p className="text-lg font-bold m-5">Block input </p>;
@@ -53,7 +65,7 @@ export const getBlock = () => {
       {hdg()}
       {blockstuff.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
-          Id {person.id} , {person.name}, {person.date}, {person.amt}
+          Id {person.id} , {person.name}, {person.date}, {person.rnd}
         </p>
       ))}
     </div>
