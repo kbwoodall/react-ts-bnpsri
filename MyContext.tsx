@@ -32,7 +32,7 @@ const getFchn = () => {
   return Math.floor(Math.random() * 100000000);
 };
 
-const getTChn = () => {
+const getTchn = () => {
   return Math.floor(Math.random() * 100000000);
 };
 
@@ -53,15 +53,23 @@ export const blockstuff = [
     ts: timestamp2,
     amt: 150.23,
     fchn: getFchn(),
-    tchn: getTChn(),
+    tchn: getTchn(),
   },
 ];
 
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
+  const getFchn = () => {
+    return Math.floor(Math.random() * 100000000);
+  };
+
+  const getTchn = () => {
+    return Math.floor(Math.random() * 100000000);
+  };
+
   const [fchn, setFchn] = useState(getFchn);
-  const [tchn, setTchn] = useState(getTChn);
+  const [tchn, setTchn] = useState(getTchn);
   console.log('date in unix ' + timestamp + ' ' + timestamp2);
 
   const hdg = () => {
@@ -73,8 +81,8 @@ export const getBlock = () => {
       {hdg()}
       {blockstuff.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
-          Id {person.id} , {person.name}, {person.date}, {person.amt},{' '}
-          {person.fchn}, {person.tchn}
+          Id {person.id} , {person.name}, {person.date}, {person.amt},
+          {fchn}, {tchn}
         </p>
       ))}
     </div>
