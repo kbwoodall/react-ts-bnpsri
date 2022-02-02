@@ -20,6 +20,51 @@ export function showText(imsg: ShowTextProps) {
   //console.log('in ShowText ' + imsg.msg);
   return <p className="text-lg font-bold m-5"> {imsg.msg}</p>;
 }
+// ------------------------------------------------------------
+
+const str = '2021-06-11';
+const timestamp = new Date(str).getTime();
+let newdate1 = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+}).format(timestamp);
+const timestamp2 = new Date().getTime();
+let newdate2 = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+}).format(timestamp2);
+
+// ------------------------------------------------------------
+
+const getRandom = () => {
+  return Math.floor(Math.random() * 100000000);
+};
+export const blockstuff = [
+  {
+    id: 123,
+    name: 'Bob',
+    date: newdate1,
+    ts: timestamp,
+    amt: 100.01,
+    rnd: getRandom(),
+  },
+  {
+    id: 345,
+    name: 'Bing',
+    date: newdate2,
+    ts: timestamp2,
+    amt: 150.23,
+    rnd: getRandom(),
+  },
+];
 
 function Display() {
   const value = useContext(DataContext);
@@ -27,15 +72,15 @@ function Display() {
   var loopData: string = '';
   var i: number = 0;
   for (i = 0; i < 2; i++) {
-    console.log( {value});
+    console.log({ value });
     loopData = value[i].date;
-    console.log( loopData);
-    let date1 =value[0].date;
+    console.log(loopData);
+    let date1 = value[0].date;
     const date11 = new Date(date1);
-    let date2 =value[1].date;
+    let date2 = value[1].date;
+
+    console.log(date11);
     
-    console.log( date11);
-    //console.log( loopData.amt);
   }
 
   return <div>The info is {value[0].date}</div>;
@@ -56,8 +101,14 @@ export function myhooks(): JSX.Element | null {
   return (
     <div>
       {showText(myObj)}
-      {Display()}
-
+      <div>
+        {blockstuff.map((person, id) => (
+          <p key={id} className="text-lg font-bold m-5">
+            Id {person.id} , {person.name}, {person.date}, {person.amt}
+          </p>
+        ))}
+      </div>
+      );
       <p className="text-lg font-bold m-5">You clicked {count} times first</p>
       <button
         className="ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"

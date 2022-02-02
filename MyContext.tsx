@@ -54,7 +54,7 @@ export const blockstuff = [
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
-  console.log('date in unix ' + timestamp + ' ' + timestamp2 + ' ');
+  console.log('date in unix ' + timestamp + ' ' + timestamp2 );
 
   const hdg = () => {
     return <p className="text-lg font-bold m-5">Block input </p>;
@@ -65,7 +65,7 @@ export const getBlock = () => {
       {hdg()}
       {blockstuff.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
-          Id {person.id} , {person.name}, {person.date}, {person.rnd}
+          Id {person.id} , {person.name}, {person.date}, {person.amt}
         </p>
       ))}
     </div>
