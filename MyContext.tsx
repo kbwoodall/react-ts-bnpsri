@@ -57,9 +57,16 @@ export const blockstuff = [
   },
 ];
 
+const buildIt = () => {
+  const Array = [];
+  Array.push({ id: 'hey' });
+  console.log(Array[0]);
+};
+
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
+  buildIt();
   const getFchn = () => {
     return Math.floor(Math.random() * 100000000);
   };
@@ -81,8 +88,8 @@ export const getBlock = () => {
       {hdg()}
       {blockstuff.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
-          Id {person.id} , {person.name}, {person.date}, {person.amt},
-          {fchn}, {tchn}
+          Id {person.id} , {person.name}, {person.date}, {person.amt},{fchn},{' '}
+          {tchn}
         </p>
       ))}
     </div>
