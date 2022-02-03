@@ -44,7 +44,7 @@ export const blockstuff = [
     ts: timestamp,
     amt: 100.01,
     fchn: getFchn(),
-    tchn: getFchn(),
+    tchn: getTchn(),
   },
   {
     id: 345,
