@@ -59,8 +59,25 @@ export const blockstuff = [
 
 const buildIt = () => {
   const Array = [];
-  Array.push({ id: 'hey' });
-  console.log(Array[0]);
+  Array.push({
+    id: 123,
+    name: 'Bob',
+    date: newdate1,
+    ts: timestamp,
+    amt: 100.01,
+    fchn: getFchn(),
+    tchn: getTchn(),
+  });
+  Array.push({
+    id: 124,
+    name: 'Bob',
+    date: newdate1,
+    ts: timestamp,
+    amt: 100.01,
+    fchn: getFchn(),
+    tchn: getTchn(),
+  });
+  console.log(Array[1]);
 };
 
 export const DataContext = React.createContext(blockstuff);
