@@ -55,9 +55,8 @@ export const blockstuff = [
     fchn: getFchn(),
     tchn: getTchn(),
   },
-];
-
-const buildIt = () => {
+]
+const buildIt = (from: number, to: number) => {
   const Array = [];
   Array.push({
     id: 123,
@@ -65,8 +64,8 @@ const buildIt = () => {
     date: newdate1,
     ts: timestamp,
     amt: 100.01,
-    fchn: getFchn(),
-    tchn: getTchn(),
+    fchn: from,
+    tchn: to,
   });
   Array.push({
     id: 456,
@@ -74,8 +73,8 @@ const buildIt = () => {
     date: newdate1,
     ts: timestamp,
     amt: 100.01,
-    fchn: getFchn(),
-    tchn: getTchn(),
+    fchn: from,
+    tchn: to,
   });
   console.log(Array[1]);
 };
@@ -83,25 +82,27 @@ const buildIt = () => {
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
-  const [fchn, setFchn] = useState(100);
-  const [tchn, setTchn] = useState(100);
-  buildIt();
+
+  const fval = Math.floor(Math.random() * 100000000);
+  const tval = Math.floor(Math.random() * 100000000);
+
+  const [fchn, setFchn] = useState(fval);
+  const [tchn, setTchn] = useState(tval);
 
   const getFchn = () => {
     const val = Math.floor(Math.random() * 100000000);
+    console.log("val " + val);
     setFchn(val);
-
-    //return Math.floor(Math.random() * 100000000);
   };
 
   const getTchn = () => {
     const val = Math.floor(Math.random() * 100000000);
     setTchn(val);
-
-    //return Math.floor(Math.random() * 100000000);
   };
 
-  console.log('date in unix ' + timestamp + ' ' + timestamp2);
+  buildIt(fval,tval);
+
+  console.log('date in unix ' + timestamp + ' ' + timestamp2) + ' ' ;
 
   const hdg = () => {
     return <p className="text-lg font-bold m-5">Block input </p>;
