@@ -48,7 +48,7 @@ export const blockstuff = [
   },
   {
     id: 345,
-    name: 'Bing',
+    name: 'Jay',
     date: newdate2,
     ts: timestamp2,
     amt: 150.23,
