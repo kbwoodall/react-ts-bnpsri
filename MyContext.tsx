@@ -69,8 +69,8 @@ const buildIt = () => {
     tchn: getTchn(),
   });
   Array.push({
-    id: 124,
-    name: 'Bob',
+    id: 456,
+    name: 'Jay',
     date: newdate1,
     ts: timestamp,
     amt: 100.01,
@@ -83,17 +83,24 @@ const buildIt = () => {
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
+  const [fchn, setFchn] = useState(100);
+  const [tchn, setTchn] = useState(100);
   buildIt();
+
   const getFchn = () => {
-    return Math.floor(Math.random() * 100000000);
+    const val = Math.floor(Math.random() * 100000000);
+    setFchn(val);
+
+    //return Math.floor(Math.random() * 100000000);
   };
 
   const getTchn = () => {
-    return Math.floor(Math.random() * 100000000);
+    const val = Math.floor(Math.random() * 100000000);
+    setTchn(val);
+
+    //return Math.floor(Math.random() * 100000000);
   };
 
-  const [fchn, setFchn] = useState(getFchn);
-  const [tchn, setTchn] = useState(getTchn);
   console.log('date in unix ' + timestamp + ' ' + timestamp2);
 
   const hdg = () => {
