@@ -10,11 +10,11 @@ import { MyFormStuff } from './MyForm';
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
-import { DataContext, getBlock, blockstuff } from './MyContext';
+import { DataContext, getBlock, blockstuff, buildIt } from './MyContext';
 
 const App = () => {
   return (
-    <DataContext.Provider value={blockstuff}>
+    <DataContext.Provider value={buildIt}>
       <div className="flex bg-green-400 h-screen ">
         <div className="bg-blue-200 ml-10 rounded-xl mt-10 mb-10 ml-5 mr-10">
           {getBlock()}
