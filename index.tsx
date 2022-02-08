@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import { mydemo, myhooks, formatDate, showText } from './MyUseEffect';
+import { myhooks, formatDate, showText } from './MyUseEffect';
 import './style.css';
 import { useState, useReducer, useEffect } from 'react';
 import { FC, ReactElement } from 'react';
 import { MyFormStuff } from './MyForm';
 
 import { createContext, useContext } from 'react';
-import ReactDOM from 'react-dom';
 
 import { DataContext, getBlock } from './MyContext';
 
@@ -31,6 +30,7 @@ const App = () => {
 render(<App />, document.getElementById('root'));
 
 /*
+//import ReactDOM from 'react-dom';
  function Display() {
     const value = useContext(DataContext);
     return <div>The info is {blockstuff[0].name}</div>;
