@@ -55,7 +55,7 @@ export const blockstuff = [
     fchn: getFchn(),
     tchn: getTchn(),
   },
-]
+];
 const buildIt = (from: number, to: number) => {
   const Array = [];
   Array.push({
@@ -83,27 +83,15 @@ const buildIt = (from: number, to: number) => {
 export const DataContext = React.createContext(blockstuff);
 
 export const getBlock = () => {
-
   const fval = Math.floor(Math.random() * 100000000);
   const tval = Math.floor(Math.random() * 100000000);
 
   const [fchn, setFchn] = useState(fval);
   const [tchn, setTchn] = useState(tval);
 
-  const getFchn = () => {
-    const val = Math.floor(Math.random() * 100000000);
-    console.log("val " + val);
-    setFchn(val);
-  };
+  const gotIt = buildIt(fval, tval);
 
-  const getTchn = () => {
-    const val = Math.floor(Math.random() * 100000000);
-    setTchn(val);
-  };
-
-  const gotIt = buildIt(fval,tval);
-
-  console.log('date in unix ' + timestamp + ' ' + timestamp2) + ' ' ;
+  console.log('date in unix ' + timestamp + ' ' + timestamp2) + ' ';
 
   const hdg = () => {
     return <p className="text-lg font-bold m-5">Block input </p>;
@@ -123,6 +111,17 @@ export const getBlock = () => {
 };
 
 /*
+  const getFchn = () => {
+    const val = Math.floor(Math.random() * 100000000);
+    console.log("val " + val);
+    setFchn(val);
+  };
+
+  const getTchn = () => {
+    const val = Math.floor(Math.random() * 100000000);
+    setTchnval);
+  };
+  
 import React from 'react';
 import { useState, useReducer, useEffect } from 'react';
 import moment from 'moment';
