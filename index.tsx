@@ -10,7 +10,7 @@ import { MyFormStuff } from './MyForm';
 import { createContext, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
-import { DataContext, getBlock, blockstuff, buildIt } from './MyContext';
+import { DataContext, getBlock, buildIt } from './MyContext';
 
 const App = () => {
   return (

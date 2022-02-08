@@ -3,7 +3,7 @@ import { useState, useReducer, useEffect } from 'react';
 import moment from 'moment';
 import { FC, ReactElement } from 'react';
 import { createContext, useContext } from 'react';
-import { LangContext, data, DataContext, buildIt ,location } from './MyContext';
+import { LangContext, data, DataContext, buildIt, location } from './MyContext';
 
 interface FormatDateProps {
   date: Date;
@@ -47,6 +47,7 @@ let newdate2 = new Intl.DateTimeFormat('en-US', {
 const getRandom = () => {
   return Math.floor(Math.random() * 100000000);
 };
+
 export const blockstuff = [
   {
     id: 123,
@@ -82,32 +83,6 @@ function Display() {
   }
 
   return <div>The info is {value[0].date}</div>;
-
-  /*
-
-import React from 'react';
-import { useState, useReducer, useEffect } from 'react';
-import moment from 'moment';
-import { FC, ReactElement } from 'react';
-import { createContext, useContext } from 'react';
-
-export function MyFormStuff() {
-  const hey = (msg: string) => {
-    setUser(msg);
-    alert('you entered ' + msg);
-  };
-
-  const [user, setUser] = useState('K Woodall');
-  const [name, setName] = useState('');
-  const UserContext = createContext(us
-
-
-{value}.map((person, id) => (
-  <p key={id} className="text-lg font-bold m-5">
-    Id {person.id} , {person.name}, {person.date}, {person.amt}
-  </p>
-))}
-*/
 }
 // -----------------------------------------------------------------------
 export function myhooks(): JSX.Element | null {
@@ -137,6 +112,30 @@ export function myhooks(): JSX.Element | null {
 }
 // -----------------------------------------------------------------------
 /*
+
+import React from 'react';
+import { useState, useReducer, useEffect } from 'react';
+import moment from 'moment';
+import { FC, ReactElement } from 'react';
+import { createContext, useContext } from 'react';
+
+export function MyFormStuff() {
+  const hey = (msg: string) => {
+    setUser(msg);
+    alert('you entered ' + msg);
+  };
+
+  const [user, setUser] = useState('K Woodall');
+  const [name, setName] = useState('');
+  const UserContext = createContext(us
+
+
+{value}.map((person, id) => (
+  <p key={id} className="text-lg font-bold m-5">
+    Id {person.id} , {person.name}, {person.date}, {person.amt}
+  </p>
+))}
+
  <p className="text-lg font-bold m-15"> testing </p>
 export function mydemo(): JSX.Element | null {
   console.log('this is an exportable function in TypeScript. !!');
