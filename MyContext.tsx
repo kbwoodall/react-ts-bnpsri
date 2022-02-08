@@ -80,7 +80,7 @@ export const buildIt = (from: number, to: number) => {
   return Array;
 };
 
-export const DataContext = React.createContext(blockstuff);
+export const DataContext = React.createContext(buildIt);
 
 export const getBlock = () => {
   const fval = Math.floor(Math.random() * 100000000);
