@@ -56,7 +56,7 @@ export const blockstuff = [
     tchn: getTchn(),
   },
 ];
-const buildIt = (from: number, to: number) => {
+export const buildIt = (from: number, to: number) => {
   const Array = [];
   Array.push({
     id: 123,
