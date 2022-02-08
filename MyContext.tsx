@@ -70,9 +70,9 @@ const buildIt = (from: number, to: number) => {
   Array.push({
     id: 456,
     name: 'Jay',
-    date: newdate1,
-    ts: timestamp,
-    amt: 100.01,
+    date: newdate2,
+    ts: timestamp2,
+    amt: 150.01,
     fchn: from,
     tchn: to,
   });
