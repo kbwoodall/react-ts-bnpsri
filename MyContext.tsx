@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import moment from 'moment';
 import { useState, useReducer, useEffect } from 'react';
 export const data = { city: 'Yorba Linda' };
-export const LangContext = React.createContext(data);
+
 // ------------------------------------------------------------
 
 const str = '2021-06-11';
@@ -28,7 +28,7 @@ let newdate2 = new Intl.DateTimeFormat('en-US', {
 
 // ------------------------------------------------------------
 
-export const buildIt = (from: number, to: number) => {
+const buildIt = (from: number, to: number) => {
   const Array = [];
   Array.push({
     id: 123,
