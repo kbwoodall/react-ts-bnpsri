@@ -28,32 +28,6 @@ let newdate2 = new Intl.DateTimeFormat('en-US', {
 
 // ------------------------------------------------------------
 
-
-/*
-
-export const blockstuff = [
-  {
-    id: 123,
-    name: 'Bob',
-    date: newdate1,
-    ts: timestamp,
-    amt: 100.01,
-    fchn: getFchn(),
-    tchn: getTchn(),
-  },
-  {
-    id: 345,
-    name: 'Jay',
-    date: newdate2,
-    ts: timestamp2,
-    amt: 150.23,
-    fchn: getFchn(),
-    tchn: getTchn(),
-  },
-];
-
-
-*/
 export const buildIt = (from: number, to: number) => {
   const Array = [];
   Array.push({
@@ -63,7 +37,7 @@ export const buildIt = (from: number, to: number) => {
     ts: timestamp,
     amt: 100.01,
     fchn: from,
-    tchn: to,
+    tchn: from,
   });
   Array.push({
     id: 456,
@@ -100,8 +74,8 @@ export const getBlock = () => {
       {hdg()}
       {gotIt.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
-          Id {person.id} , {person.name}, {person.date}, {person.amt},{fchn},{' '}
-          {tchn}
+          Id {person.id} , {person.name}, {person.date}, {person.amt},
+          {person.fchn}, {person.tchn}
         </p>
       ))}
     </div>
@@ -109,6 +83,26 @@ export const getBlock = () => {
 };
 
 /*
+export const blockstuff = [
+  {
+    id: 123,
+    name: 'Bob',
+    date: newdate1,
+    ts: timestamp,
+    amt: 100.01,
+    fchn: getFchn(),
+    tchn: getTchn(),
+  },
+  {
+    id: 345,
+    name: 'Jay',
+    date: newdate2,
+    ts: timestamp2,
+    amt: 150.23,
+    fchn: getFchn(),
+    tchn: getTchn(),
+  },
+];
 
 
 //const getFchn = () => {
