@@ -28,14 +28,9 @@ let newdate2 = new Intl.DateTimeFormat('en-US', {
 
 // ------------------------------------------------------------
 
-const getFchn = () => {
-  return Math.floor(Math.random() * 100000000);
-};
 
-//const getTchn = () => {
-//  return Math.floor(Math.random() * 100000000);
-//};
 /*
+
 export const blockstuff = [
   {
     id: 123,
@@ -56,6 +51,8 @@ export const blockstuff = [
     tchn: getTchn(),
   },
 ];
+
+
 */
 export const buildIt = (from: number, to: number) => {
   const Array = [];
@@ -112,6 +109,15 @@ export const getBlock = () => {
 };
 
 /*
+
+
+//const getFchn = () => {
+//  return Math.floor(Math.random() * 100000000);
+//};
+
+//const getTchn = () => {
+//  return Math.floor(Math.random() * 100000000);
+//};
   const getFchn = () => {
     const val = Math.floor(Math.random() * 100000000);
     console.log("val " + val);
