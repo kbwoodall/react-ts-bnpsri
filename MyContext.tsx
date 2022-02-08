@@ -77,6 +77,7 @@ const buildIt = (from: number, to: number) => {
     tchn: to,
   });
   console.log(Array[1]);
+  return Array;
 };
 
 export const DataContext = React.createContext(blockstuff);
@@ -100,7 +101,7 @@ export const getBlock = () => {
     setTchn(val);
   };
 
-  buildIt(fval,tval);
+  const gotIt = buildIt(fval,tval);
 
   console.log('date in unix ' + timestamp + ' ' + timestamp2) + ' ' ;
 
@@ -111,7 +112,7 @@ export const getBlock = () => {
   return (
     <div>
       {hdg()}
-      {blockstuff.map((person, id) => (
+      {gotIt.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
           Id {person.id} , {person.name}, {person.date}, {person.amt},{fchn},{' '}
           {tchn}
