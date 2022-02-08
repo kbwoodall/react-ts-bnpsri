@@ -3,7 +3,7 @@ import { useState, useReducer, useEffect } from 'react';
 import moment from 'moment';
 import { FC, ReactElement } from 'react';
 import { createContext, useContext } from 'react';
-import { LangContext, data, DataContext, location } from './MyContext';
+import { LangContext, data, DataContext, buildIt ,location } from './MyContext';
 
 interface FormatDateProps {
   date: Date;
