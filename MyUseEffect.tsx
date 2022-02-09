@@ -87,7 +87,7 @@ function Display() {
 // -----------------------------------------------------------------------
 export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
-  let myObj = { msg: 'Format to chain  now' };
+  let myObj = { msg: 'Format to chain ' };
   const value= useContext(DataContext);
   console.log('Value is ' + value[0].name);
 

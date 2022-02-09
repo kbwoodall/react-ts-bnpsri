@@ -60,7 +60,6 @@ var gotIt = buildIt(fval, tval);
 export const DataContext = React.createContext(gotIt);
 
 export const getBlock = () => {
-  
   console.log('date in unix ' + timestamp + ' ' + timestamp2) + ' ';
 
   const hdg = () => {
@@ -72,8 +71,7 @@ export const getBlock = () => {
       {hdg()}
       {gotIt.map((person, id) => (
         <p key={id} className="text-lg font-bold m-5">
-          Id {person.id} , {person.name}, {person.date}, {person.amt},
-          {person.fchn}, {person.tchn}
+          Id {person.id} , {person.name}, {person.date}, {person.amt}
         </p>
       ))}
     </div>
