@@ -21,7 +21,7 @@ export function showText(imsg: ShowTextProps) {
   return <p className="text-lg font-bold m-5"> {imsg.msg}</p>;
 }
 // ------------------------------------------------------------
-
+/*
 const str = '2021-06-11';
 const timestamp = new Date(str).getTime();
 let newdate1 = new Intl.DateTimeFormat('en-US', {
@@ -84,6 +84,7 @@ function Display() {
 
   return <div>The info is {value[0].date}</div>;
 }
+*/
 // -----------------------------------------------------------------------
 export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
@@ -102,7 +103,9 @@ export function myhooks(): JSX.Element | null {
         ))}
       </div>
       );
-      <p className="text-lg font-bold m-5">You clicked {count} times first</p>
+
+      
+
       <button
         className="ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         onClick={() => setCount(count + 1)}
@@ -114,7 +117,7 @@ export function myhooks(): JSX.Element | null {
 }
 // -----------------------------------------------------------------------
 /*
-
+<p className="text-lg font-bold m-5">You clicked {count} times first</p>
 import React from 'react';
 import { useState, useReducer, useEffect } from 'react';
 import moment from 'moment';
