@@ -60,14 +60,7 @@ var gotIt = buildIt(fval, tval);
 export const DataContext = React.createContext(gotIt);
 
 export const getBlock = () => {
-  //const fval = Math.floor(Math.random() * 100000000);
-  //const tval = Math.floor(Math.random() * 100000000);
-
-  //const [fchn, setFchn] = useState(fval);
-  //const [tchn, setTchn] = useState(tval);
-
-  //gotIt = buildIt(fval, tval);
-
+  
   console.log('date in unix ' + timestamp + ' ' + timestamp2) + ' ';
 
   const hdg = () => {
@@ -88,6 +81,15 @@ export const getBlock = () => {
 };
 
 /*
+
+//const fval = Math.floor(Math.random() * 100000000);
+  //const tval = Math.floor(Math.random() * 100000000);
+
+  //const [fchn, setFchn] = useState(fval);
+  //const [tchn, setTchn] = useState(tval);
+
+  //gotIt = buildIt(fval, tval);
+
 export const blockstuff = [
   {
     id: 123,

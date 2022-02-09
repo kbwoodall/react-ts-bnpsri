@@ -3,7 +3,7 @@ import { useState, useReducer, useEffect } from 'react';
 import moment from 'moment';
 import { FC, ReactElement } from 'react';
 import { createContext, useContext } from 'react';
-import { LangContext, data, DataContext, buildIt, location } from './MyContext';
+import { data, DataContext } from './MyContext';
 
 interface FormatDateProps {
   date: Date;
@@ -89,12 +89,13 @@ export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
   let myObj = { msg: 'Format to chain  now' };
   const value = useContext(DataContext);
+  console.log('Value is ' + value[0].name);
 
   return (
     <div>
       {showText(myObj)}
       <div>
-        {blockstuff.map((person, id) => (
+        {value.map((person, id) => (
           <p key={id} className="text-lg font-bold m-5">
             Id {person.id} , {person.name}, {person.rnd}, {person.amt}
           </p>
