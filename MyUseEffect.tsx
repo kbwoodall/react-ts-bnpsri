@@ -89,7 +89,7 @@ function Display() {
 export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
   let myObj = { msg: 'Format to chain ' };
-  const value= useContext(DataContext);
+  const value = useContext(DataContext);
   console.log('Value is ' + value[0].name);
 
   return (
@@ -98,13 +98,11 @@ export function myhooks(): JSX.Element | null {
       <div>
         {value.map((person, id) => (
           <p key={id} className="text-lg font-bold m-5">
-            Id {person.id} , {person.name}, {person.ts}, {person.amt}, {person.fchn}, {person.tchn}
+            Id {person.id} , {person.name}, {person.ts}, {person.amt},{' '}
+            {person.fchn}, {person.tchn}
           </p>
         ))}
       </div>
-      );
-
-      
 
       <button
         className="ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
