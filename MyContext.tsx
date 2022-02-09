@@ -52,16 +52,21 @@ const buildIt = (from: number, to: number) => {
   return Array;
 };
 
-export const DataContext = React.createContext(buildIt);
+const fval = Math.floor(Math.random() * 100000000);
+const tval = Math.floor(Math.random() * 100000000);
+
+var gotIt = buildIt(fval, tval);
+
+export const DataContext = React.createContext(gotIt);
 
 export const getBlock = () => {
-  const fval = Math.floor(Math.random() * 100000000);
-  const tval = Math.floor(Math.random() * 100000000);
+  //const fval = Math.floor(Math.random() * 100000000);
+  //const tval = Math.floor(Math.random() * 100000000);
 
-  const [fchn, setFchn] = useState(fval);
-  const [tchn, setTchn] = useState(tval);
+  //const [fchn, setFchn] = useState(fval);
+  //const [tchn, setTchn] = useState(tval);
 
-  const gotIt = buildIt(fval, tval);
+  //gotIt = buildIt(fval, tval);
 
   console.log('date in unix ' + timestamp + ' ' + timestamp2) + ' ';
 
