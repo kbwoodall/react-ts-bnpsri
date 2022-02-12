@@ -20,8 +20,37 @@ export function showText(imsg: ShowTextProps) {
   //console.log('in ShowText ' + imsg.msg);
   return <p className="text-lg font-bold m-5"> {imsg.msg}</p>;
 }
-// ------------------------------------------------------------
+// -----------------------------------------------------------------------
+export function myhooks(): JSX.Element | null {
+  const [count, setCount] = useState(0);
+  let myObj = { msg: 'Format to chain ' };
+  const value = useContext(DataContext);
+  console.log('Value is ' + value[0].name);
+
+  return (
+    <div>
+      {showText(myObj)}
+      <div>
+        {value.map((person, id) => (
+          <p key={id} className="text-lg font-bold m-5">
+            Id {person.id} , {person.name}, {person.ts}, {person.amt},{' '}
+            {person.fchn}, {person.tchn}
+          </p>
+        ))}
+      </div>
+
+      <button
+        className="ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={() => setCount(count + 1)}
+      >
+        Format now
+      </button>
+    </div>
+  );
+}
+// -----------------------------------------------------------------------
 /*
+
 const str = '2021-06-11';
 const timestamp = new Date(str).getTime();
 let newdate1 = new Intl.DateTimeFormat('en-US', {
@@ -84,37 +113,6 @@ function Display() {
 
   return <div>The info is {value[0].date}</div>;
 }
-*/
-// -----------------------------------------------------------------------
-export function myhooks(): JSX.Element | null {
-  const [count, setCount] = useState(0);
-  let myObj = { msg: 'Format to chain ' };
-  const value = useContext(DataContext);
-  console.log('Value is ' + value[0].name);
-
-  return (
-    <div>
-      {showText(myObj)}
-      <div>
-        {value.map((person, id) => (
-          <p key={id} className="text-lg font-bold m-5">
-            Id {person.id} , {person.name}, {person.ts}, {person.amt},{' '}
-            {person.fchn}, {person.tchn}
-          </p>
-        ))}
-      </div>
-
-      <button
-        className="ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={() => setCount(count + 1)}
-      >
-        Format now
-      </button>
-    </div>
-  );
-}
-// -----------------------------------------------------------------------
-/*
 <p className="text-lg font-bold m-5">You clicked {count} times first</p>
 import React from 'react';
 import { useState, useReducer, useEffect } from 'react';
