@@ -24,25 +24,20 @@ export function showText(imsg: ShowTextProps) {
 export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
   let myObj = { msg: 'Format to chain ' };
-  const value = (useContext(DataContext));
-  
+  const value = useContext(DataContext);
 
   console.log('Value is ' + value[0].name) + ' ' + value;
 
-  for (var i:number = 0; i < 2; i++) {
-
-
-  }
+  for (var i = 0; i < 2; i++) {}
   var aval = [];
   aval.push(value);
   console.log(aval);
-  
 
   return (
     <div>
       {showText(myObj)}
       <div>
-        {(value).map((person, id) => (
+        {value.map((person, id) => (
           <p key={id} className="text-lg font-bold m-5">
             Id {person.id} , {person.name}, {person.ts}, {person.amt},{' '}
             {person.fchn}, {person.tchn}
@@ -52,7 +47,7 @@ export function myhooks(): JSX.Element | null {
 
       <button
         className="ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={() => alert("ok")}
+        onClick={() => alert('ok')}
       >
         Format now
       </button>
