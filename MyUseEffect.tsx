@@ -17,22 +17,21 @@ interface ShowTextProps {
   msg: string;
 }
 export function showText(imsg: ShowTextProps) {
-  //console.log('in ShowText ' + imsg.msg);
   return <p className="text-lg font-bold m-5"> {imsg.msg}</p>;
 }
 // -----------------------------------------------------------------------
 export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
   let myObj = { msg: 'Format to chain ' };
-  const value = useContext(DataContext);
 
-  console.log('Value is ' + value[0].name) + ' ' + value;
+  let val: Array<string> = useContext(DataContext);
 
-  for (var i = 0; i < 2; i++) {}
+  console.log('Value is ' + ' ' + val.length);
+
   var aval = [];
-  aval.push(value[0]);
-  aval.push(value[1]);
-  console.log(aval);
+  for (var i = 0; i < val.length; i++) {
+    aval.push(val[i]);
+  }
 
   return (
     <div>
