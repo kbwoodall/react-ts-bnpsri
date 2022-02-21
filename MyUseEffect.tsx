@@ -30,14 +30,15 @@ export function myhooks(): JSX.Element | null {
 
   for (var i = 0; i < 2; i++) {}
   var aval = [];
-  aval.push(value);
+  aval.push(value[0]);
+  aval.push(value[1]);
   console.log(aval);
 
   return (
     <div>
       {showText(myObj)}
       <div>
-        {value.map((person, id) => (
+        {aval.map((person, id) => (
           <p key={id} className="text-lg font-bold m-5">
             Id {person.id} , {person.name}, {person.ts}, {person.amt},{' '}
             {person.fchn}, {person.tchn}
