@@ -23,6 +23,7 @@ export function showText(imsg: ShowTextProps) {
 export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
   let myObj = { msg: 'Format to chain ' };
+  let myObj2 = { msg: 'ok so far ' };
 
   let val: Array<string> = useContext(DataContext);
 
@@ -47,7 +48,7 @@ export function myhooks(): JSX.Element | null {
 
       <button
         className="ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={() => showText(myObj)}
+        onClick={() => showText(myObj2)}
       >
         Format now
       </button>
