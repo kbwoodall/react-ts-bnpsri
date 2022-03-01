@@ -20,6 +20,7 @@ export function showText(imsg: ShowTextProps) {
   return <p className="text-lg font-bold m-5"> {imsg.msg}</p>;
 }
 // -----------------------------------------------------------------------
+
 export function myhooks(): JSX.Element | null {
   const [count, setCount] = useState(0);
   let myObj = { msg: 'Format to chain ' };
@@ -29,11 +30,6 @@ export function myhooks(): JSX.Element | null {
 
   const newMsg = () => {
     alert(myObj2.msg);
-    return (
-      <div>
-        <p className="text-lg font-bold m-5"> myObj2.msg</p>{' '}
-      </div>
-    );
   };
 
   console.log('Value is ' + ' ' + val.length);
@@ -54,6 +50,7 @@ export function myhooks(): JSX.Element | null {
           </p>
         ))}
       </div>
+      {showText(myObj2)}
 
       <button
         className="ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
