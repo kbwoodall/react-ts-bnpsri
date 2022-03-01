@@ -28,7 +28,12 @@ export function myhooks(): JSX.Element | null {
   let val: Array<string> = useContext(DataContext);
 
   const newMsg = () => {
-    return <p className="text-lg font-bold m-5"> {myObj2.msg}</p>;
+    alert(myObj2.msg);
+    return (
+      <div>
+        <p className="text-lg font-bold m-5"> myObj2.msg</p>{' '}
+      </div>
+    );
   };
 
   console.log('Value is ' + ' ' + val.length);
