@@ -27,6 +27,10 @@ export function myhooks(): JSX.Element | null {
 
   let val: Array<string> = useContext(DataContext);
 
+  const newMsg = () => {
+    return <p className="text-lg font-bold m-5"> {myObj2.msg}</p>;
+  };
+
   console.log('Value is ' + ' ' + val.length);
 
   var aval = [];
@@ -48,7 +52,7 @@ export function myhooks(): JSX.Element | null {
 
       <button
         className="ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={() => showText(myObj2)}
+        onClick={() => newMsg()}
       >
         Format now
       </button>
