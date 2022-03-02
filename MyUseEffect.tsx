@@ -29,7 +29,8 @@ export function myhooks(): JSX.Element | null {
   let val: Array<string> = useContext(DataContext);
 
   const newMsg = () => {
-    alert(myObj2.msg);
+    setCount(count +1);
+    alert(myObj2.msg + count)  ;
   };
 
   console.log('Value is ' + ' ' + val.length);
