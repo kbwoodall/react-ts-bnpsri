@@ -57,6 +57,10 @@ const tval = Math.floor(Math.random() * 100000000);
 
 var gotIt = buildIt(fval, tval);
 
+const newStuff = () => {
+  return null;
+};
+
 export const DataContext = React.createContext(gotIt);
 
 export const getBlock = () => {
