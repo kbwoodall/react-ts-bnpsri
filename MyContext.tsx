@@ -64,10 +64,12 @@ const newStuff = () => {
 export const DataContext = React.createContext(gotIt);
 
 export const getBlock = () => {
+  const [msg, setMsg] = useState('Block Input Data');
+
   console.log('date in unix ' + timestamp + ' ' + timestamp2) + ' ';
 
   const hdg = () => {
-    return <p className="text-lg font-bold m-5">Block input </p>;
+    return <p className="text-lg font-bold m-5">{msg} </p>;
   };
 
   return (
